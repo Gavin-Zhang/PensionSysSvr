@@ -1,0 +1,62 @@
+2022/10/05 00:23:43 ===============================================================
+2022/10/05 00:23:43 CallMethod: Mysqlsvr::RegisterClinet [reflect: call of reflect.Value.Call on zero Value].
+2022/10/05 00:23:43 goroutine 24 [running]:
+runtime/debug.Stack(0x8c5480, 0xc0001872b0, 0xc00016dab0)
+	C:/Go/src/runtime/debug/stack.go:24 +0xa4
+gonet/utils.CallMethod.func1(0x91b640, 0xc0001838c0, 0x93fb36, 0xe, 0xc00016de78)
+	H:/GoProgram/yanglao/src/gonet/utils/method.go:40 +0x258
+panic(0x8ab320, 0xc000005080)
+	C:/Go/src/runtime/panic.go:967 +0x16b
+reflect.flag.mustBe(...)
+	C:/Go/src/reflect/value.go:208
+reflect.Value.Call(0x0, 0x0, 0x0, 0xc000005060, 0x1, 0x1, 0x0, 0x0, 0x5)
+	C:/Go/src/reflect/value.go:319 +0x174
+gonet/utils.CallMethod(0x91b640, 0xc0001838c0, 0x93fb36, 0xe, 0xc000187270, 0x1, 0x1, 0x0, 0x0, 0x0, ...)
+	H:/GoProgram/yanglao/src/gonet/utils/method.go:74 +0x2d9
+gonet.context_thread(0xc000180720)
+	H:/GoProgram/yanglao/src/gonet/context.go:100 +0x1ad
+created by gonet.NewService
+	H:/GoProgram/yanglao/src/gonet/service.go:67 +0x25c
+
+2022/10/05 00:23:43 ===============================================================
+2022/10/05 00:23:43 call Mysqlsvr::RegisterClinet error.
+2022/10/05 00:23:43 CallMethod: Mysqlsvr::RegisterClinet [reflect: call of reflect.Value.Call on zero Value].
+2022/10/05 00:23:43 goroutine 24 [running]:
+runtime/debug.Stack(0x91b640, 0xc0001838c0, 0xc0002721b9)
+	C:/Go/src/runtime/debug/stack.go:24 +0xa4
+gonet.context_thread(0xc000180720)
+	H:/GoProgram/yanglao/src/gonet/context.go:108 +0x306
+created by gonet.NewService
+	H:/GoProgram/yanglao/src/gonet/service.go:67 +0x25c
+
+2022/10/05 00:26:44 ===============================================================
+2022/10/05 00:26:44 CallMethod: Mysqlsvr::RegisterClient [reflect: Call using structure.Client as type *structure.Client].
+2022/10/05 00:26:44 goroutine 26 [running]:
+runtime/debug.Stack(0x8c5480, 0xc00003e7b0, 0xc000073898)
+	C:/Go/src/runtime/debug/stack.go:24 +0xa4
+gonet/utils.CallMethod.func1(0x91b640, 0xc000140ab0, 0x93fb36, 0xe, 0xc000073e78)
+	H:/GoProgram/yanglao/src/gonet/utils/method.go:40 +0x258
+panic(0x88b580, 0xc00003e770)
+	C:/Go/src/runtime/panic.go:967 +0x16b
+reflect.Value.call(0x91b640, 0xc000140ab0, 0x2a13, 0x93890c, 0x4, 0xc0000044a0, 0x1, 0x1, 0xa01940, 0xc0002084e0, ...)
+	C:/Go/src/reflect/value.go:390 +0x12ac
+reflect.Value.Call(0x91b640, 0xc000140ab0, 0x2a13, 0xc0000044a0, 0x1, 0x1, 0xc000140ab0, 0x2a13, 0x5)
+	C:/Go/src/reflect/value.go:321 +0xbb
+gonet/utils.CallMethod(0x91b640, 0xc000140ab0, 0x93fb36, 0xe, 0xc00003e730, 0x1, 0x1, 0x0, 0x0, 0x0, ...)
+	H:/GoProgram/yanglao/src/gonet/utils/method.go:74 +0x2d9
+gonet.context_thread(0xc0000fe8a0)
+	H:/GoProgram/yanglao/src/gonet/context.go:100 +0x1ad
+created by gonet.NewService
+	H:/GoProgram/yanglao/src/gonet/service.go:67 +0x25c
+
+2022/10/05 00:26:44 ===============================================================
+2022/10/05 00:26:44 call Mysqlsvr::RegisterClient error.
+2022/10/05 00:26:44 CallMethod: Mysqlsvr::RegisterClient [reflect: Call using structure.Client as type *structure.Client].
+2022/10/05 00:26:44 goroutine 26 [running]:
+runtime/debug.Stack(0x91b640, 0xc000140ab0, 0xc0003521b9)
+	C:/Go/src/runtime/debug/stack.go:24 +0xa4
+gonet.context_thread(0xc0000fe8a0)
+	H:/GoProgram/yanglao/src/gonet/context.go:108 +0x306
+created by gonet.NewService
+	H:/GoProgram/yanglao/src/gonet/service.go:67 +0x25c
+

@@ -1,0 +1,112 @@
+2022-10-04/17:36:21 [Info] Login: &{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:07:07 [Info] Login: &{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:11:27 [Info] Login: &{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:15:33 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:16:03 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:18:13 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:24:41 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:24:41 [Info] Login: &{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:25:08 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:34:56 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:34:56 [Info] Login: &{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/21:36:57 [Info] Login: &{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/22:48:48 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/22:48:48 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/22:57:41 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/22:57:41 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/22:58:26 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:26 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:26 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:26 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:33 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:33 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:33 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:58:33 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/22:59:28 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:00:06 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:02:54 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:04:38 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:12:12 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:16:20 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:16:20 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:19:23 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:19:23 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:20:14 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:20:14 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:20:29 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:28:22 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:30:34 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:32:41 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:36:02 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:36:02 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:48:59 [Info] Login:&{   }
+    service/mysqlsvr.go:72(yanglao/service.(*Mysqlsvr).Login)
+2022-10-04/23:50:15 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:50:15 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:50:15 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:50:15 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:57:52 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:57:52 [Info] GetByRequest&{OPTIONS /register HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-add.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63032 /register <nil> <nil> <nil> 0xc00004a200}
+    single/session.go:285(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-04/23:57:52 [Info] GetByRequest cookie 1
+    single/session.go:287(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-04/23:57:52 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-04/23:57:52 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:57:52 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:20(yanglao/controller.RegisterClientHandler)
+2022-10-04/23:57:52 [Info] GetByRequest&{POST /register HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[315] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-add.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a340 <nil> 315 [] false localhost:8001 map[addr:[1] age:[37] ascription:[1] chinaid:[210604198509070313] contacts[0][LAY_TABLE_INDEX]:[0] contacts[0][name]:[11111] contacts[0][phone]:[2] contacts[0][relationship]:[3] healthdescription:[123] name:[12] other:[456] phone:[13312846070] registrant:[789] registrant_time:[2022-10-04] sex:[1] slow[]:[2] type:[1]] map[addr:[1] age:[37] ascription:[1] chinaid:[210604198509070313] contacts[0][LAY_TABLE_INDEX]:[0] contacts[0][name]:[11111] contacts[0][phone]:[2] contacts[0][relationship]:[3] healthdescription:[123] name:[12] other:[456] phone:[13312846070] registrant:[789] registrant_time:[2022-10-04] sex:[1] slow[]:[2] type:[1]] <nil> map[] [::1]:63032 /register <nil> <nil> <nil> 0xc00004a380}
+    single/session.go:285(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-04/23:57:52 [Info] GetByRequest cookie 1
+    single/session.go:287(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-04/23:57:52 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-04/23:57:52 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:26(yanglao/controller.RegisterClientHandler)

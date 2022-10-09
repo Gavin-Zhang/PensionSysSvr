@@ -1,0 +1,966 @@
+2022-10-06/08:43:49 [Info] 4
+    service/mysqlsvr.go:116(yanglao/service.(*Mysqlsvr).GetClients)
+2022-10-06/08:43:49 [Info] <nil>
+    service/mysqlsvr.go:117(yanglao/service.(*Mysqlsvr).GetClients)
+2022-10-06/08:43:49 [Info] [0xc0002200f0 0xc0002201e0 0xc0002202d0 0xc0002203c0]
+    service/mysqlsvr.go:118(yanglao/service.(*Mysqlsvr).GetClients)
+2022-10-06/11:33:12 [Info] count:4
+    service/mysqlsvr.go:125(yanglao/service.(*Mysqlsvr).GetClients)
+2022-10-06/11:48:58 [Info] Login:&{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/11:48:58 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/11:48:58 [Info] InitSession:fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY=map[fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY=:0xc00018c2c0]
+    single/session.go:119(yanglao/single.(*SessionMemoryMgr).InitSession)
+2022-10-06/11:50:09 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:46945 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:09 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:09 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:50:09 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:50:09 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:46946 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002940c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:09 [Info] GetByRequest cookie 1bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:09 [Info] GetByRequest cookie 2fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:09 [Info] GetByRequest session&{fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY= {0 0} {13891267272824239024 831155539401 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:50:09 [Error] GetClientsHandler ExpandResult err:ExpandResult: 第0个参数[controller.Clients无法给[]*structure.Client赋值].
+    controller/getclientshandler.go:57(yanglao/controller.GetClientsHandler)
+2022-10-06/11:50:46 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:46945 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:46 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:46 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:50:46 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:50:46 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:46946 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002940c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:46 [Info] GetByRequest cookie 1bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:46 [Info] GetByRequest cookie 2fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:50:46 [Info] GetByRequest session&{fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY= {0 0} {13891267313272844012 868875696901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:50:46 [Error] GetClientsHandler ExpandResult err:ExpandResult: 第0个参数[controller.Clients无法给[]*structure.Client赋值].
+    controller/getclientshandler.go:57(yanglao/controller.GetClientsHandler)
+2022-10-06/11:53:22 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a600}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:22 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:22 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:53:22 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:53:22 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:22 [Info] GetByRequest cookie 1bm-cookie=fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:22 [Info] GetByRequest cookie 2fARToMfoUFRgZdcIR6GFJJKDdfhJvqO1dPusdUwYknY=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:22 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:53:22 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:53:31 [Info] Login:&{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/11:53:31 [Info] Login:11111&{11111 111111  }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/11:53:31 [Info] InitSession:PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=map[PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=:0xc000228880]
+    single/session.go:119(yanglao/single.(*SessionMemoryMgr).InitSession)
+2022-10-06/11:53:32 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094280}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:32 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:32 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:53:32 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:53:32 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0000942c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:32 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:32 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:53:32 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891267490674433396 12759729801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:54:35 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:54:35 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:54:35 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891267558395776008 75835337501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/11:55:20 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/11:55:20 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c080}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/11:55:20 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891267606773735388 120894914801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:00:14 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:00:14 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228100}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:00:14 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891267922281637644 414722720801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:02:11 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:02:11 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:11 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268047964126152 531777415901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:02:21 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:02:21 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228140}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:02:21 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268059079137992 542155009501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:03:35 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:03:35 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:03:35 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268138760278368 616379254901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:04:37 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:04:37 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228140}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:04:37 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268205418822556 678465806001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:07:48 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:07:48 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:07:48 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268409895400740 868857695801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002282c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:08:04 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:08:04 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c080}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:04 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268427033182624 884815608501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:08:48 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:08:48 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c640}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:08:48 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268474883374180 929421159801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228100}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:09:13 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:09:13 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:13 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268501362328880 954056568901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:09:25 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:09:25 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094140}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:09:25 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268514707943468 966517281601 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:10:09 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:10:09 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228280}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:10:09 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268561944099924 1010508797801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=20 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[20] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=20 <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:07 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:12:07 [Info] GetByRequest&{GET /getclients?page=1&limit=20 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[20] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=20 <nil> <nil> <nil> 0xc00018c640}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:07 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268688308365056 1128171527701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=90 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[90] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=90 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:10 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:12:10 [Info] GetByRequest&{GET /getclients?page=1&limit=90 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[90] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=90 <nil> <nil> <nil> 0xc00004a000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:10 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268691188742628 1130830679801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47523 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a100}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:12:12 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/12:12:12 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:47524 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094300}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest cookie 1bm-cookie=PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest cookie 2PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/12:12:12 [Info] GetByRequest session&{PRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE= {0 0} {13891268693453347376 1132947800901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/12:44:19 [Info] GCSessionPRLnnvKm8JsVKsLV-8wSy81TbxBK5y6b33VoZNvUYLE=
+    single/session.go:169(yanglao/single.(*SessionMemoryMgr).GCSession)
+2022-10-06/14:02:51 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:02:51 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:02:51 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:02:51 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:02:51 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:02:51 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:02:51 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:02:51 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:03:44 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:03:44 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:03:44 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:03:44 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:03:44 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:03:44 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:03:44 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:03:44 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:04:20 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:20 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:20 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:04:20 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:04:20 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c600}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:20 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:20 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:04:20 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:04:51 [Info] Login:&{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/14:04:51 [Info] InitSession:R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=map[R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=:0xc00004a600]
+    single/session.go:119(yanglao/single.(*SessionMemoryMgr).InitSession)
+2022-10-06/14:04:52 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a680}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:52 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:52 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:04:52 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:04:52 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a740}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:52 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:52 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:04:52 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891275952363751216 7893363474501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:06:32 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:06:32 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a440}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:06:32 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891276059936664716 7993562205601 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:08:11 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:08:11 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0002280c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:08:11 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891276165411720592 8091736820901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:09:12 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:21(yanglao/controller.RegisterClientHandler)
+2022-10-06/14:09:12 [Info] GetByRequest&{OPTIONS /register HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-add.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:30742 /register <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:09:12 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:09:12 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:09:12 [Error] RegisterClientHandler not find player by cookie
+    controller/registerclienthandler.go:27(yanglao/controller.RegisterClientHandler)
+2022-10-06/14:09:12 [Info] RegisterClientHandler
+    controller/registerclienthandler.go:21(yanglao/controller.RegisterClientHandler)
+2022-10-06/14:09:12 [Info] GetByRequest&{POST /register HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[336] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-add.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c600 <nil> 336 [] false localhost:8001 map[addr:[DFGDFG] age:[54] ascription:[6] chinaid:[210604196807060333] contacts:[[{"name":"11111","phone":"2","relationship":"3","LAY_TABLE_INDEX":0}]] healthdescription:[4444] name:[999] other:[5555] phone:[13312846070] registrant:[FGFGFG] registrant_time:[2022-10-06] sex:[1] slow:[["2","10"]] type:[3]] map[addr:[DFGDFG] age:[54] ascription:[6] chinaid:[210604196807060333] contacts:[[{"name":"11111","phone":"2","relationship":"3","LAY_TABLE_INDEX":0}]] healthdescription:[4444] name:[999] other:[5555] phone:[13312846070] registrant:[FGFGFG] registrant_time:[2022-10-06] sex:[1] slow:[["2","10"]] type:[3]] <nil> map[] [::1]:30743 /register <nil> <nil> <nil> 0xc00018c640}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:09:12 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:09:12 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:09:12 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891276231626501756 8153453350801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:09:12 [Info] contacts[{"name":"11111","phone":"2","relationship":"3","LAY_TABLE_INDEX":0}]
+    controller/registerclienthandler.go:72(yanglao/controller.RegisterClientHandler)
+2022-10-06/14:09:12 [Info] slow["2","10"]
+    controller/registerclienthandler.go:73(yanglao/controller.RegisterClientHandler)
+2022-10-06/14:11:09 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30742 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:11:09 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:11:09 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:11:09 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:11:09 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:30743 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a400}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:11:09 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:11:09 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:11:09 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891276357425997064 8270625052701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:27 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:29:27 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:27 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277535757285316 9367987818201 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:37 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:29:37 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0000942c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:37 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277546222259956 9377715374601 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000094380}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:29:46 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:29:46 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a440}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:29:46 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277556014458472 9386843896701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc0000944c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:30:17 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:30:17 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a4c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:17 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277589224223816 9417767665501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:30:59 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:30:59 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:30:59 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277635036823624 9460483108701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c600}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:32:09 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:32:09 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:32:09 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277710173753604 9530458111001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c600}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:36:37 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:36:37 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00004a040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:36:37 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891277997875887736 9798397436301 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest&{OPTIONS /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[GET] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35173 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc00018c900}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:37:08 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:37:08 [Info] GetByRequest&{GET /getclients?page=1&limit=10 HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[limit:[10] page:[1]] map[] <nil> map[] [::1]:35174 /getclients?page=1&limit=10 <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:37:08 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278031149656680 9829385208701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:41:16 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:41:16 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094040 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000094100}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:16 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278297687828132 10077635407801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc00004a000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:41:25 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:41:25 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094000 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000094040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:41:25 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278306657979648 10085941882901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc00004a540}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:42:12 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:42:12 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000228180 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000228240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:42:12 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278357171536276 10132989573801 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000228180}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:46:05 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:46:05 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a000 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00004a040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:05 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278607191698868 10365827891401 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000228340}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:46:12 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:46:12 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a400 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00004a440}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:46:12 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278614977307436 10373097307201 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:32 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:49:32 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000228180 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000228240}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:32 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278829487097936 10572858732901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc00004a040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:38 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:49:38 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094240 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000094280}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:38 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278835957893680 10578887077701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:39 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000228340 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000228380}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:39 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:39 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:39 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278837219703504 10580075145701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a4c0 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00004a500}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278837945482628 10580727183001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094480 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc0000944c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:40 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278838749528628 10581531229001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:41 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a700 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00004a740}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:41 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:41 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:41 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278839605315152 10582313273701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000094600}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:46 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:49:46 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c600 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00018c640}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:46 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278844975310272 10587314559701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc0000946c0 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc000094700}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278845594083296 10587859590901 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094880 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc0000948c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:47 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278846044109096 10588309616701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc00004aa00}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:51 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:49:51 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c680 <nil> 15 [] false localhost:8001 map[limit:[20] page:[1]] map[limit:[20] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00018c740}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:51 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278850655323192 10592625863501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:52 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c780 <nil> 15 [] false localhost:8001 map[limit:[20] page:[1]] map[limit:[20] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00018c7c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:52 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:52 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:52 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278851368101616 10593264900101 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:35173 /getclients <nil> <nil> <nil> 0xc000094bc0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/14:49:57 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/14:49:57 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004ab00 <nil> 15 [] false localhost:8001 map[limit:[20] page:[1]] map[limit:[20] page:[1]] <nil> map[] [::1]:35174 /getclients <nil> <nil> <nil> 0xc00004ab40}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest cookie 1bm-cookie=R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest cookie 2R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/14:49:57 [Info] GetByRequest session&{R1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc= {0 0} {13891278856783099336 10598311188701 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/15:20:19 [Info] GCSessionR1RZ95oxMl10FSkBCbNOhmPRi4MIF2CRSUZYko3RvFc=
+    single/session.go:169(yanglao/single.(*SessionMemoryMgr).GCSession)
+2022-10-06/18:52:32 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:56466 /getclients <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:52:32 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:52:32 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:52:32 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/18:52:32 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a4c0 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:56467 /getclients <nil> <nil> <nil> 0xc00004a500}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:52:32 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:52:32 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:52:32 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/18:53:45 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:56466 /getclients <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:45 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:45 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:53:45 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/18:53:45 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a1c0 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:56467 /getclients <nil> <nil> <nil> 0xc00004a200}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:45 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:45 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:53:45 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/18:53:50 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:56466 /getclients <nil> <nil> <nil> 0xc00018c640}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:50 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:50 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:53:50 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/18:53:50 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00004a540 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:56467 /getclients <nil> <nil> <nil> 0xc00004a580}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:50 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/18:53:50 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/18:53:50 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:08:05 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63947 /getclients <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:05 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:05 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:08:05 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:08:05 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c780 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:63948 /getclients <nil> <nil> <nil> 0xc00018c7c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:05 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:05 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:08:05 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:08:11 [Info] Login:&{   }
+    service/mysqlsvr.go:74(yanglao/service.(*Mysqlsvr).Login)
+2022-10-06/19:08:11 [Info] InitSession:99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=map[99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=:0xc0000943c0]
+    single/session.go:119(yanglao/single.(*SessionMemoryMgr).InitSession)
+2022-10-06/19:08:12 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63947 /getclients <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:12 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:12 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:08:12 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:08:12 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094440 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:63948 /getclients <nil> <nil> <nil> 0xc000094480}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:12 [Info] GetByRequest cookie 1bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:12 [Info] GetByRequest cookie 299ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:08:12 [Info] GetByRequest session&{99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo= {0 0} {13891295494009902516 26092908429001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Cache-Control:[no-cache] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63947 /getclients <nil> <nil> <nil> 0xc00004a1c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:09:53 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:09:53 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Cache-Control:[no-cache] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D] Origin:[http://localhost] Pragma:[no-cache] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c080 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:63948 /getclients <nil> <nil> <nil> 0xc00018c5c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest cookie 1bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest cookie 299ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:09:53 [Info] GetByRequest session&{99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo= {0 0} {13891295603179644840 26194630247101 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63947 /getclients <nil> <nil> <nil> 0xc00018c040}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:10:49 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:10:49 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc000094040 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:63948 /getclients <nil> <nil> <nil> 0xc000094100}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest cookie 1bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest cookie 299ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:10:49 [Info] GetByRequest session&{99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo= {0 0} {13891295662354335384 26249675395501 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest&{OPTIONS /getclients HTTP/1.1 1 1 map[Accept:[*/*] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Request-Headers:[access-control-allow-origin] Access-Control-Request-Method:[POST] Connection:[keep-alive] Content-Type:[application/json;charset=utf-8] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] {} <nil> 0 [] false localhost:8001 map[] map[] <nil> map[] [::1]:63947 /getclients <nil> <nil> <nil> 0xc000094000}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest cookie 1
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest session<nil>
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
+2022-10-06/19:11:29 [Error] GetClientsHandler not find player by cookie
+    controller/getclientshandler.go:30(yanglao/controller.GetClientsHandler)
+2022-10-06/19:11:29 [Info] GetByRequest&{POST /getclients HTTP/1.1 1 1 map[Accept:[application/json, text/javascript, */*; q=0.01] Accept-Encoding:[gzip, deflate, br] Accept-Language:[zh-CN,zh;q=0.9] Access-Control-Allow-Origin:[http://localhost] Connection:[keep-alive] Content-Length:[15] Content-Type:[application/json;charset=utf-8] Cookie:[Hm_lvt_b393d153aeb26b46e9431fabaf0f6190=1664636223,1664876271; bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D] Origin:[http://localhost] Referer:[http://localhost/yanglao/admin/client-list.html] Sec-Fetch-Dest:[empty] Sec-Fetch-Mode:[cors] Sec-Fetch-Site:[same-site] User-Agent:[Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36]] 0xc00018c080 <nil> 15 [] false localhost:8001 map[limit:[10] page:[1]] map[limit:[10] page:[1]] <nil> map[] [::1]:63948 /getclients <nil> <nil> <nil> 0xc00018c5c0}
+    single/session.go:293(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest cookie 1bm-cookie=99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo%3D
+    single/session.go:295(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest cookie 299ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo=
+    single/session.go:300(yanglao/single.(*SessionManager).GetByRequest)
+2022-10-06/19:11:29 [Info] GetByRequest session&{99ax8CXjoNxugNf9LrBWrXrHo-5kEPnN7Xz7aSqm4Xo= {0 0} {13891295705752321844 26290123709001 0xd29c00} map[account:11111]}
+    single/player.go:83(yanglao/single.(*PlayerManager).GetByRequest)
