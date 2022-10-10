@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"bitgame/utils"
+	"utils"
 
-	us "bitgame/utils/unmarshal"
+	us "utils/unmarshal"
 )
 
 // 服务器类表管理类

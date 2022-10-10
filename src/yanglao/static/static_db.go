@@ -3,9 +3,9 @@ package static
 import (
 	"io/ioutil"
 
-	"bitgame/utils"
+	"utils"
 
-	us "bitgame/utils/unmarshal"
+	us "utils/unmarshal"
 )
 
 // 服务器类表管理类
@@ -15,6 +15,7 @@ type Static_DB struct {
 	Conn      string   `json:"db"`
 	Indexs    []string `json:"index"`
 	IndexHead string   `json:"index_head"`
+	OrderHead string   `json:"order_head"`
 }
 
 func (p *Static_DB) Init(path string, output bool) {

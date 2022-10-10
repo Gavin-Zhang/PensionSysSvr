@@ -9,8 +9,8 @@ import (
 
 	"github.com/cihub/seelog"
 
-	"gonet"
-	"gonet/orm"
+	"yanglao/gonet"
+	"yanglao/gonet/orm"
 )
 
 type Mysqlsvr struct {
@@ -31,7 +31,8 @@ func (p *Mysqlsvr) connect() error {
 
 	orm.RegisterModel(new(structure.Indexs),
 		new(structure.User),
-		new(structure.Client))
+		new(structure.Client),
+		new(structure.Order))
 	orm.RegisterDataBase("default", "mysql", static.Db.Conn)
 
 	err := orm.RunSyncdb("default", false, true)

@@ -3,9 +3,9 @@ package static
 import (
 	"io/ioutil"
 
-	"bitgame/utils"
+	"utils"
 
-	us "bitgame/utils/unmarshal"
+	us "utils/unmarshal"
 )
 
 var MyConfig *Static_Config = &Static_Config{}

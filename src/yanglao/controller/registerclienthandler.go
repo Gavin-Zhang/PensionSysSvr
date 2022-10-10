@@ -2,17 +2,17 @@ package controller
 
 import (
 	"encoding/json"
-	"gonet"
 	"net/http"
 	"time"
 	"utils"
+	"yanglao/gonet"
 
 	"yanglao/base"
 	"yanglao/constant"
 	"yanglao/single"
 	"yanglao/structure"
 
-	goutils "gonet/utils"
+	goutils "yanglao/gonet/utils"
 
 	"github.com/cihub/seelog"
 )

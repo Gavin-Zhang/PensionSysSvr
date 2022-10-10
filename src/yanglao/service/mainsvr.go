@@ -1,8 +1,8 @@
 package service
 
 import (
-	"gonet"
 	"sync"
+	"yanglao/gonet"
 )
 
 type Mainsvr struct {

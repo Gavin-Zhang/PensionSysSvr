@@ -9,8 +9,8 @@ import (
 	"yanglao/single"
 	"yanglao/structure"
 
-	"gonet"
-	goutils "gonet/utils"
+	"yanglao/gonet"
+	goutils "yanglao/gonet/utils"
 
 	"github.com/cihub/seelog"
 )

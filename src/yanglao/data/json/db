@@ -1,5 +1,6 @@
 {
-	"db" : "root:bitgame@tcp(127.0.0.1:3306)/yanglao?charset=utf8&loc=Asia%2FShanghai",
+	"db" : "root:bitgame@tcp(127.0.0.1:3306)/yanglao1?charset=utf8&loc=Asia%2FShanghai",
 	"index" : ["roleIdx"],
 	"index_head": "WLB_"
+	"order_head": "GD"
 }

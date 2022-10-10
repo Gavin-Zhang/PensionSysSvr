@@ -1,13 +1,13 @@
 package single
 
 import (
-	"gonet"
 	"net/http"
 	"sync"
+	"yanglao/gonet"
 
 	"yanglao/structure"
 
-	goutils "gonet/utils"
+	goutils "yanglao/gonet/utils"
 
 	"github.com/cihub/seelog"
 )
