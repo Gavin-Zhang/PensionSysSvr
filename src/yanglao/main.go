@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gonet"
+	"yanglao/gonet"
 	_ "yanglao/service"
 	_ "yanglao/service/db"
 	_ "yanglao/single"
