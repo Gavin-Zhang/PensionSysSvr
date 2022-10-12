@@ -16,6 +16,7 @@ type Order struct {
 	Community     string    //所属社区
 	OrderStatus   string    //工单状态
 	PaymentStatus string    //支付状态
+	PaymentType   string    //支付方式
 	Handler       string    //下单人
 	HandlerTime   time.Time //下单时间
 	Remarks       string    `orm:"type(text)"` //备注
