@@ -26,13 +26,14 @@ func (p *Mysqlsvr) Init(wg *sync.WaitGroup) {
 }
 
 func (p *Mysqlsvr) connect() error {
-	orm.Debug = false
+	orm.Debug = true
 	orm.RegisterDriver("mysql", orm.DR_MySQL)
 
 	orm.RegisterModel(new(structure.Indexs),
 		new(structure.User),
 		new(structure.Client),
-		new(structure.Order))
+		new(structure.Order),
+		new(structure.Service))
 	orm.RegisterDataBase("default", "mysql", static.Db.Conn)
 
 	err := orm.RunSyncdb("default", false, true)
@@ -42,7 +43,6 @@ func (p *Mysqlsvr) connect() error {
 
 	p.o = orm.NewOrm()
 	p.init_index()
-	p.GetClients(1, 10)
 
 	return nil
 }

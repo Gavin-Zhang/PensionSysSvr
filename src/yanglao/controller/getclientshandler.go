@@ -44,7 +44,8 @@ func GetClientsHandler(w http.ResponseWriter, r *http.Request) {
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 	}
 
-	ret, err := gonet.CallByName("mysqlsvr", "GetClients", page, limit)
+	condition := GetConditionMap(r)
+	ret, err := gonet.CallByName("mysqlsvr", "GetClients", page, limit, condition)
 	if err != nil {
 		seelog.Error("GetClientsHandler call mysqlsvr function GetClients err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
@@ -65,4 +66,19 @@ func GetClientsHandler(w http.ResponseWriter, r *http.Request) {
 	back.Data = make([]interface{}, 1)
 	back.Data[0] = clients.Data
 	sendback(w, back)
+}
+
+func GetConditionMap(r *http.Request) map[string]string {
+	condition := make(map[string]string)
+	if r.FormValue("name") != "" {
+		condition["name"] = r.FormValue("name")
+	}
+	if r.FormValue("phone") != "" {
+		condition["phone"] = r.FormValue("phone")
+	}
+	if r.FormValue("chinaid") != "" {
+		condition["chinaid"] = r.FormValue("chinaid")
+	}
+	seelog.Info("GetConditionMap:", r.FormValue("name")+"|"+r.FormValue("phone")+"|"+r.FormValue("chinaid"))
+	return condition
 }

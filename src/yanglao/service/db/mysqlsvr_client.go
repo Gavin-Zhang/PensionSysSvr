@@ -48,21 +48,29 @@ func (p *Mysqlsvr) RegisterClient(client *structure.Client) bool {
 	return true
 }
 
-func (p *Mysqlsvr) GetClients(page int, limit int) controller.Clients {
+func (p *Mysqlsvr) GetClients(page int, limit int, condition map[string]string) controller.Clients {
 	var clients []*structure.Client
-	_, err := p.o.QueryTable("client").Limit(limit, (page-1)*limit).All(&clients)
+
+	seelog.Info(condition)
+	qs := p.o.QueryTable("client")
+	for k, v := range condition {
+		qs = qs.Filter(k, v)
+	}
+
+	q := qs
+	_, err := q.Limit(limit, (page-1)*limit).All(&clients)
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetClients 1 err:", err)
 	}
 
-	count := 0
-	err = p.o.Raw("select count(*) from client").QueryRow(&count)
+	//err = p.o.Raw("select count(*) from client").QueryRow(&count)
+	count, err := qs.Count()
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetClients 2 err:", err)
 	}
 
 	back := controller.Clients{
-		Count: count,
+		Count: int(count),
 		Data:  clients,
 	}
 	return back
