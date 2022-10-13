@@ -14,7 +14,8 @@ func (p *Mainsvr) Init(args string) {
 
 	wg.Add(1)
 	p.NewService("Mysqlsvr", &wg)
-	p.NewService("Httpsvr", "")
+	p.NewService("Httpsvr_cli", "")
+	//p.NewService("Httpsvr_cli", "")
 
 }
 

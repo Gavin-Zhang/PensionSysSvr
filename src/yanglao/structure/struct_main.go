@@ -10,7 +10,7 @@ const (
 
 type Indexs struct {
 	Key   string `orm:"pk"`
-	Value uint32
+	Value uint32 `orm:"default(1)"`
 }
 
 type Client struct {

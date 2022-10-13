@@ -11,21 +11,28 @@ import (
 	"github.com/cihub/seelog"
 )
 
-func (p *Mysqlsvr) GetOrders(page int, limit int) controller.Orders {
+func (p *Mysqlsvr) GetOrders(page int, limit int, condition map[string]string) controller.Orders {
 	var orders []*structure.Order
-	_, err := p.o.QueryTable("order").Limit(limit, (page-1)*limit).All(&orders)
-	if err != nil {
-		seelog.Error("Mysqlsvr::GetOrders 1 err:", err)
+	qs := p.o.QueryTable("order")
+	for k, v := range condition {
+		qs = qs.Filter(k, v)
 	}
 
-	count := 0
-	err = p.o.Raw("select count(*) from order").QueryRow(&count)
+	q := qs
+	_, err := q.Limit(limit, (page-1)*limit).All(&orders)
+	if err != nil {
+		seelog.Error("Mysqlsvr::GetOrders 1 err:", err)
+		return controller.Orders{}
+	}
+
+	count, err := qs.Count()
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetOrders 2 err:", err)
+		return controller.Orders{}
 	}
 
 	back := controller.Orders{
-		Count: count,
+		Count: int(count),
 		Data:  orders,
 	}
 	return back

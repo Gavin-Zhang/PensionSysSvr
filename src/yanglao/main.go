@@ -4,6 +4,7 @@ import (
 	"yanglao/gonet"
 	_ "yanglao/service"
 	_ "yanglao/service/db"
+	_ "yanglao/service/http"
 	_ "yanglao/single"
 
 	"yanglao/static"

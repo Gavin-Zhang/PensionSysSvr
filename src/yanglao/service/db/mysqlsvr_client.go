@@ -61,12 +61,14 @@ func (p *Mysqlsvr) GetClients(page int, limit int, condition map[string]string) 
 	_, err := q.Limit(limit, (page-1)*limit).All(&clients)
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetClients 1 err:", err)
+		return controller.Clients{}
 	}
 
 	//err = p.o.Raw("select count(*) from client").QueryRow(&count)
 	count, err := qs.Count()
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetClients 2 err:", err)
+		return controller.Clients{}
 	}
 
 	back := controller.Clients{

@@ -21,10 +21,3 @@ type Order struct {
 	HandlerTime   time.Time //下单时间
 	Remarks       string    `orm:"type(text)"` //备注
 }
-
-type Service struct {
-	Id    string `orm:"pk"`
-	Class string
-	Name  string
-	Price string
-}
