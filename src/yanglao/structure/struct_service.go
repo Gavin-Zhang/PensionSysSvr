@@ -5,7 +5,7 @@ type ServiceClass struct {
 }
 
 type Service struct {
-	Id    string `orm:"pk"`
+	Id    int `orm:"pk;auto"`
 	Class string
 	Name  string
 	Price string

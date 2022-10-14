@@ -14,29 +14,29 @@ import (
 	"github.com/cihub/seelog"
 )
 
-func GetServiceClassHandler(w http.ResponseWriter, r *http.Request) {
+func GetWorkerClassHandler(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	base.Cors(&w, r)
 
 	player := single.PlayerMgr.GetByRequest(r)
 	if player == nil {
 		sendErr(w, constant.ResponseCode_CookieErr, "cookie error")
-		seelog.Error("GetServiceClassHandler not find player by cookie")
+		seelog.Error("GetWorkerClassHandler not find player by cookie")
 		return
 	}
 	single.SessionMgr.SetCookie(w, player.Session)
 
-	ret, err := gonet.CallByName("mysqlsvr", "GetServiceClassList")
+	ret, err := gonet.CallByName("mysqlsvr", "GetWorkerClassList")
 	if err != nil {
-		seelog.Error("GetServiceClassHandler call mysqlsvr function GetServiceClassList err:", err)
+		seelog.Error("GetWorkerClassHandler call mysqlsvr function GetWorkerClassList err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
 
-	var list []*structure.ServiceClass
+	var list []*structure.WorkerClass
 	err = goutils.ExpandResult(ret, &list)
 	if err != nil {
-		seelog.Error("GetServiceClassHandler ExpandResult err:", err)
+		seelog.Error("GetWorkerClassHandler ExpandResult err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
