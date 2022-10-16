@@ -18,4 +18,5 @@ const (
 	ResponseCode_Fail           = 1000
 	ResponseCode_CookieErr      = 1001
 	ResponseCode_ProgramErr     = 1002
+	ResponseCode_ParamErr       = 1003
 )

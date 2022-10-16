@@ -1,15 +1,23 @@
 package db
 
 import (
-	"strings"
-	"time"
-
 	"yanglao/controller"
-	"yanglao/static"
 	"yanglao/structure"
 
 	"github.com/cihub/seelog"
 )
+
+func (p *Mysqlsvr) GetConsumptionTypes() []*structure.ConsumptionType {
+	var list []*structure.ConsumptionType
+
+	_, err := p.o.QueryTable("consumption_type").All(&list)
+	if err != nil {
+		seelog.Error("Mysqlsvr::GetConsumptionTypes  err:", err)
+		return make([]*structure.ConsumptionType, 0)
+	}
+
+	return list
+}
 
 func (p *Mysqlsvr) GetOrders(page int, limit int, condition map[string]string) controller.Orders {
 	var orders []*structure.Order
@@ -39,7 +47,6 @@ func (p *Mysqlsvr) GetOrders(page int, limit int, condition map[string]string) c
 }
 
 func (p *Mysqlsvr) AddOrder(order *structure.Order) bool {
-	order.Idx = static.Db.OrderHead + strings.Replace(time.Now().Format("20060102150405.000000000"), ".", "", -1)
 	_, err := p.o.Insert(order)
 	if err != nil {
 		seelog.Error("Mysqlsvr::AddOrder save order err: ", err)

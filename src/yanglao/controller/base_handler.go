@@ -4,6 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+
+	"yanglao/base"
+	"yanglao/single"
 )
 
 type BackInfo struct {
@@ -24,4 +27,19 @@ func sendErr(w http.ResponseWriter, code int, msg string) {
 	backinfo.Code = code
 	backinfo.Message = msg
 	sendback(w, backinfo)
+}
+
+func cors(w *http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+	base.Cors(w, r)
+}
+
+func checkSession(w http.ResponseWriter, r *http.Request) *single.Player {
+	player := single.PlayerMgr.GetByRequest(r)
+	if player == nil {
+		return nil
+	}
+	// 刷新SESSION
+	single.SessionMgr.SetCookie(w, player.Session)
+	return player
 }
