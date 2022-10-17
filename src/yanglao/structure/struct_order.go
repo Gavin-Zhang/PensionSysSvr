@@ -28,12 +28,16 @@ type Order struct {
 	Handler         string    //下单人
 	Remarks         string    `orm:"type(text);null"` //备注
 	Created         time.Time `orm:"auto_now_add"`
+	AssignTime      time.Time `orm:"null;description(分派时间)"`
+	BeginTime       time.Time `orm:"null;description(服务开始时间)"`
+	EndTime         time.Time `orm:"null;description(服务结束时间)"`
+	FinishTime      time.Time `orm:"null;description(订单结束时间)"`
 }
 
 // 工单状态
 const (
 	ORDER_STATUS_CREATED  = "已下单"
-	ORDER_STATUS_DISPENSE = "已分配"
+	ORDER_STATUS_DISPENSE = "已分派"
 	ORDER_STATUS_FINISHED = "已完成"
 )
 
