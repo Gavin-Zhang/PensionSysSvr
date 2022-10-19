@@ -24,6 +24,7 @@ func (p *Httpsvr_cli) Init(args string) {
 	mux.HandleFunc("/addorder", controller.AddOrderHandler)
 	mux.HandleFunc("/assignorder", controller.AssignOrderHandler)
 	mux.HandleFunc("/getpaymenttype", controller.GetPaymentTypeHandler)
+	mux.HandleFunc("/finishorder", controller.FinishOrderHandler)
 
 	http.ListenAndServe("0.0.0.0:8001", mux)
 }

@@ -43,3 +43,12 @@ func checkSession(w http.ResponseWriter, r *http.Request) *single.Player {
 	single.SessionMgr.SetCookie(w, player.Session)
 	return player
 }
+
+func checkNotEmptyParams(r *http.Request, params []string) bool {
+	for _, param := range params {
+		if r.FormValue(param) == "" {
+			return false
+		}
+	}
+	return true
+}

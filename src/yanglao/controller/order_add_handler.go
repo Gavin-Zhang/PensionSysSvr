@@ -68,7 +68,7 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	order.HighRise = 0.0
-	if r.FormValue("highrise") == "" {
+	if r.FormValue("highrise") != "" {
 		value, err := strconv.ParseFloat(r.FormValue("highrise"), 32)
 		if err != nil {
 			seelog.Error("AddOrderHandler strconv.ParseFloat(highrise) err:", err)
