@@ -72,6 +72,15 @@ func (p *Mysqlsvr) AssignOrder(order *structure.Order) bool {
 	return true
 }
 
+func (p *Mysqlsvr) ServiceFinishOrder(order *structure.Order) bool {
+	_, err := p.o.Update(order, "order_status", "begin_time", "end_time")
+	if err != nil {
+		seelog.Error("Mysqlsvr::ServiceFinishOrder update order err: ", err)
+		return false
+	}
+	return true
+}
+
 func (p *Mysqlsvr) FinisOrder(order *structure.Order, updates ...string) bool {
 	_, err := p.o.Update(order, updates...)
 	if err != nil {

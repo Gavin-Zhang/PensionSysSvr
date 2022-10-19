@@ -45,10 +45,10 @@ type Order struct {
 
 // 工单状态
 const (
-	ORDER_STATUS_CREATED   = "订单已创建"
-	ORDER_STATUS_DISPENSE  = "订单已分派"
-	ORDER_STATUS_SFINISHED = "服务已完成"
-	ORDER_STATUS_OFINISHED = "订单已完成"
+	ORDER_STATUS_WAIT_ASSIGN  = "待分派"
+	ORDER_STATUS_WAIT_SERVICE = "待服务"
+	ORDER_STATUS_WAIT_PAY     = "待支付"
+	ORDER_STATUS_OFINISHED    = "已完成"
 )
 
 // 支付状态

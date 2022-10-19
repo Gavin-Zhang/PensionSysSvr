@@ -33,19 +33,19 @@ func FinishOrderHandler(w http.ResponseWriter, r *http.Request) {
 
 	order := structure.Order{
 		Idx:         r.FormValue("idx"),
-		OrderStatus: structure.ORDER_STATUS_FINISHED,
+		OrderStatus: structure.ORDER_STATUS_OFINISHED,
 		FinishTime:  time.Now()}
 
 	value, err := time.ParseInLocation("2006-01-02 15:04:05", r.FormValue("servicebegin"), time.Local)
 	if err != nil {
-		seelog.Error("FinishOrderHandler .ParseInLocation err:", err)
+		seelog.Error("FinishOrderHandler time.ParseInLocation servicebegin err:", err)
 		sendErr(w, constant.ResponseCode_ParamErr, "服务时间格式错误")
 		return
 	}
 	order.BeginTime = value
 	value, err = time.ParseInLocation("2006-01-02 15:04:05", r.FormValue("serviceend"), time.Local)
 	if err != nil {
-		seelog.Error("FinishOrderHandler time.ParseInLocation err:", err)
+		seelog.Error("FinishOrderHandler time.ParseInLocation serviceend err:", err)
 		sendErr(w, constant.ResponseCode_ParamErr, "服务时间格式错误")
 		return
 	}
