@@ -9,13 +9,21 @@ import (
 
 func (p *Mysqlsvr) GetConsumptionTypes() []*structure.ConsumptionType {
 	var list []*structure.ConsumptionType
-
 	_, err := p.o.QueryTable("consumption_type").All(&list)
 	if err != nil {
 		seelog.Error("Mysqlsvr::GetConsumptionTypes  err:", err)
 		return make([]*structure.ConsumptionType, 0)
 	}
+	return list
+}
 
+func (p *Mysqlsvr) GetPaymentTypes() []*structure.PaymentType {
+	var list []*structure.PaymentType
+	_, err := p.o.QueryTable("payment_type").All(&list)
+	if err != nil {
+		seelog.Error("Mysqlsvr::GetPaymentTypes  err:", err)
+		return make([]*structure.PaymentType, 0)
+	}
 	return list
 }
 
@@ -50,6 +58,15 @@ func (p *Mysqlsvr) AddOrder(order *structure.Order) bool {
 	_, err := p.o.Insert(order)
 	if err != nil {
 		seelog.Error("Mysqlsvr::AddOrder save order err: ", err)
+		return false
+	}
+	return true
+}
+
+func (p *Mysqlsvr) AssignOrder(order *structure.Order) bool {
+	_, err := p.o.Update(order, "waiter", "waiter_phone", "assign_time", "order_status")
+	if err != nil {
+		seelog.Error("Mysqlsvr::AssignOrder update order err: ", err)
 		return false
 	}
 	return true

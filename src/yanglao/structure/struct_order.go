@@ -4,16 +4,25 @@ import (
 	"time"
 )
 
+// 消费类型
 type ConsumptionType struct {
-	Type string `orm:"pk"`
+	Id   int `orm:"pk;auto"`
+	Type string
+}
+
+// 支付类型
+type PaymentType struct {
+	Id   int `orm:"pk;auto"`
+	Type string
 }
 
 type Order struct {
 	Idx             string    `orm:"pk"` //工单编号
 	Name            string    //老人名字
 	Phone           string    //联系电话
+	ChinaId         string    // 身份证
 	Waiter          string    `orm:"null"` //服务人员
-	WaiterPhne      string    `orm:"null"` //服务人员联系电话
+	WaiterPhone     string    `orm:"null"` //服务人员联系电话
 	Service         string    `orm:"description(服务项目)"`
 	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府购买，积分，赠送...]
 	Charge          int16     `orm:"description(服务费用)"`

@@ -37,8 +37,16 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 		Remarks:         r.FormValue("remarks"),
 		Handler:         r.FormValue("handler"),
 		ConsumptionType: r.FormValue("consumptiontype"),
+		ChinaId:         r.FormValue("chinaid"),
 		OrderStatus:     structure.ORDER_STATUS_CREATED,
 		PaymentStatus:   structure.ORDER_PAY_STATUS_WAIT}
+
+	if r.FormValue("waiter") != "" {
+		order.Waiter = r.FormValue("waiter")
+		order.WaiterPhone = r.FormValue("waiterphone")
+		order.OrderStatus = structure.ORDER_STATUS_DISPENSE
+		order.AssignTime = time.Now()
+	}
 
 	value, err := time.ParseInLocation("2006-01-02 15:04:05", r.FormValue("servicetime"), time.Local)
 	if err != nil {
