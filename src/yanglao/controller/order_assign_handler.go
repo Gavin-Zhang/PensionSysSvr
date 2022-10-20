@@ -27,7 +27,7 @@ func AssignOrderHandler(w http.ResponseWriter, r *http.Request) {
 		Idx:         r.FormValue("idx"),
 		Waiter:      r.FormValue("waiter"),
 		WaiterPhone: r.FormValue("waiterphone"),
-		OrderStatus: structure.ORDER_STATUS_DISPENSE,
+		OrderStatus: structure.ORDER_STATUS_WAIT_SERVICE,
 		AssignTime:  time.Now()}
 
 	ret, err := gonet.CallByName("mysqlsvr", "AssignOrder", &order)

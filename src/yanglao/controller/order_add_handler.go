@@ -38,13 +38,13 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 		Handler:         r.FormValue("handler"),
 		ConsumptionType: r.FormValue("consumptiontype"),
 		ChinaId:         r.FormValue("chinaid"),
-		OrderStatus:     structure.ORDER_STATUS_CREATED,
+		OrderStatus:     structure.ORDER_STATUS_WAIT_ASSIGN,
 		PaymentStatus:   structure.ORDER_PAY_STATUS_WAIT}
 
 	if r.FormValue("waiter") != "" {
 		order.Waiter = r.FormValue("waiter")
 		order.WaiterPhone = r.FormValue("waiterphone")
-		order.OrderStatus = structure.ORDER_STATUS_DISPENSE
+		order.OrderStatus = structure.ORDER_STATUS_WAIT_SERVICE
 		order.AssignTime = time.Now()
 	}
 

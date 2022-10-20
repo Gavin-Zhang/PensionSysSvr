@@ -40,6 +40,7 @@ type Order struct {
 	AssignTime      time.Time `orm:"null;description(分派时间)"`
 	BeginTime       time.Time `orm:"null;description(服务开始时间)"`
 	EndTime         time.Time `orm:"null;description(服务结束时间)"`
+	PaymentTime     time.Time `orm:"null;type(date);description(支付日期)"`
 	FinishTime      time.Time `orm:"null;description(订单结束时间)"`
 }
 
@@ -48,7 +49,7 @@ const (
 	ORDER_STATUS_WAIT_ASSIGN  = "待分派"
 	ORDER_STATUS_WAIT_SERVICE = "待服务"
 	ORDER_STATUS_WAIT_PAY     = "待支付"
-	ORDER_STATUS_OFINISHED    = "已完成"
+	ORDER_STATUS_FINISHED     = "已完成"
 )
 
 // 支付状态

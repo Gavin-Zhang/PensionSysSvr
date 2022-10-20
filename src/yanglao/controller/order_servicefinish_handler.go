@@ -32,7 +32,7 @@ func OrderServiceFinishHandler(w http.ResponseWriter, r *http.Request) {
 
 	order := structure.Order{
 		Idx:         r.FormValue("idx"),
-		OrderStatus: structure.ORDER_STATUS_SFINISHED}
+		OrderStatus: structure.ORDER_STATUS_WAIT_PAY}
 
 	value, err := time.ParseInLocation("2006-01-02 15:04:05", r.FormValue("servicebegin"), time.Local)
 	if err != nil {
@@ -49,7 +49,7 @@ func OrderServiceFinishHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	order.EndTime = value
 
-	ret, err := gonet.CallByName("mysqlsvr", "ServiceFinishOrder", order)
+	ret, err := gonet.CallByName("mysqlsvr", "ServiceFinishOrder", &order)
 	if err != nil {
 		seelog.Error("OrderServiceFinishHandler call mysqlsvr function ServiceFinishOrder err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
