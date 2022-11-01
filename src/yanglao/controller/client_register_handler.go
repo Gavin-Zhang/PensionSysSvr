@@ -18,7 +18,6 @@ import (
 )
 
 func RegisterClientHandler(w http.ResponseWriter, r *http.Request) {
-	seelog.Info("RegisterClientHandler")
 	r.ParseForm()
 	base.Cors(&w, r)
 

@@ -77,3 +77,13 @@ func (p *Mysqlsvr) GetClients(page int, limit int, condition map[string]string) 
 	}
 	return back
 }
+
+func (p *Mysqlsvr) SetAvatar(idx string, avatar string) bool {
+	client := structure.Client{Idx: idx, Avatar: avatar}
+	_, err := p.o.Update(&client, "avatar")
+	if err != nil {
+		seelog.Error("Mysqlsvr::SetAvatar err: ", err)
+		return false
+	}
+	return true
+}

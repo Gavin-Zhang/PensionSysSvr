@@ -29,6 +29,7 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 
 	order := structure.Order{
 		Idx:             static.Db.OrderHead + strings.Replace(time.Now().Format("20060102150405.0000000"), ".", "", -1),
+		ClientIdx:       r.FormValue("clientidx"),
 		Name:            r.FormValue("name"),
 		Phone:           r.FormValue("phone"),
 		Community:       r.FormValue("ascription"),
@@ -40,13 +41,6 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 		ChinaId:         r.FormValue("chinaid"),
 		OrderStatus:     structure.ORDER_STATUS_WAIT_ASSIGN,
 		PaymentStatus:   structure.ORDER_PAY_STATUS_WAIT}
-
-	if r.FormValue("waiter") != "" {
-		order.Waiter = r.FormValue("waiter")
-		order.WaiterPhone = r.FormValue("waiterphone")
-		order.OrderStatus = structure.ORDER_STATUS_WAIT_SERVICE
-		order.AssignTime = time.Now()
-	}
 
 	value, err := time.ParseInLocation("2006-01-02 15:04:05", r.FormValue("servicetime"), time.Local)
 	if err != nil {

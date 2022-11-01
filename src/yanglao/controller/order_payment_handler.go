@@ -24,8 +24,7 @@ func OrderPaymentHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	params := []string{"idx", "consumptiontype", "paymenttime"}
-	if !checkNotEmptyParams(r, params) {
+	if !checkNotEmptyParams(r, []string{"idx", "consumptiontype", "paymenttime"}) {
 		seelog.Error("OrderPaymentHandler checkNotEmptyParams fail")
 		sendErr(w, constant.ResponseCode_ParamErr, "信息不全")
 		return

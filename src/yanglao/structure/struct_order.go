@@ -17,12 +17,13 @@ type PaymentType struct {
 }
 
 type Order struct {
-	Idx             string    `orm:"pk"` //工单编号
-	Name            string    //老人名字
-	Phone           string    //联系电话
-	ChinaId         string    // 身份证
-	Waiter          string    `orm:"null"` //服务人员
-	WaiterPhone     string    `orm:"null"` //服务人员联系电话
+	Idx       string `orm:"pk"` //工单编号
+	ClientIdx string `orm:"description(老人编号)"`
+	Name      string //老人名字
+	Phone     string //联系电话
+	ChinaId   string // 身份证
+	//Waiter          string    `orm:"null"` //服务人员
+	//WaiterPhone     string    `orm:"null"` //服务人员联系电话
 	Service         string    `orm:"description(服务项目)"`
 	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府购买，积分，赠送...]
 	Charge          int16     `orm:"description(服务费用)"`
@@ -44,6 +45,16 @@ type Order struct {
 	FinishTime      time.Time `orm:"null;description(订单结束时间)"`
 }
 
+type OrderAssign struct {
+	Index       int64 `orm:"pk;auto"`
+	OrderIdx    string
+	WorkerIdx   string
+	Status      string
+	Phone       string
+	Handler     string
+	HandlerTime time.Time `orm:"auto_now_add"`
+}
+
 // 工单状态
 const (
 	ORDER_STATUS_WAIT_ASSIGN  = "待分派"
@@ -56,4 +67,10 @@ const (
 const (
 	ORDER_PAY_STATUS_WAIT = "待支付"
 	ORDER_PAY_STATUS_OVER = "已支付"
+)
+
+// 分派状态
+const (
+	ORDER_ASSIGN_SAVE   = "确定"
+	ORDER_ASSIGN_CANCEL = "取消"
 )

@@ -1,8 +1,11 @@
 package db
 
 import (
+	"time"
 	"yanglao/controller"
 	"yanglao/structure"
+
+	"yanglao/gonet/orm"
 
 	"github.com/cihub/seelog"
 )
@@ -63,13 +66,59 @@ func (p *Mysqlsvr) AddOrder(order *structure.Order) bool {
 	return true
 }
 
-func (p *Mysqlsvr) AssignOrder(order *structure.Order) bool {
-	_, err := p.o.Update(order, "waiter", "waiter_phone", "assign_time", "order_status")
-	if err != nil {
-		seelog.Error("Mysqlsvr::AssignOrder update order err: ", err)
-		return false
+func (p *Mysqlsvr) AssignOrder(orderidx string, workers []structure.OrderAssign) string {
+	//	_, err := p.o.Update(order, "waiter", "waiter_phone", "assign_time", "order_status")
+	//	if err != nil {
+	//		seelog.Error("Mysqlsvr::AssignOrder update order err: ", err)
+	//		return false
+	//	}
+	//	return true
+
+	err := p.o.Begin()
+	order := structure.Order{Idx: orderidx}
+	if err = p.o.Read(&order); err != nil {
+		seelog.Error("Mysqlsvr::AssignOrder Read error: ", err)
+		return "程序错误"
 	}
-	return true
+	if order.OrderStatus == structure.ORDER_STATUS_WAIT_PAY || order.OrderStatus == structure.ORDER_STATUS_FINISHED {
+		seelog.Error("Mysqlsvr::AssignOrder status error")
+		return "状态已变更无法修改"
+	}
+	if order.AssignTime.IsZero() {
+		order.AssignTime = time.Now()
+		order.OrderStatus = structure.ORDER_STATUS_WAIT_SERVICE
+		if _, err = p.o.Update(&order, "assign_time", "order_status"); err != nil {
+			seelog.Error("Mysqlsvr::AssignOrder order update error:", err)
+			return "状态已变更无法修改"
+		}
+	}
+
+	_, err = p.o.Raw("update order_assign set status=? where order_idx=?", structure.ORDER_ASSIGN_CANCEL, orderidx).Exec()
+	if err != nil {
+		p.o.Rollback()
+		seelog.Error("Mysqlsvr::AssignOrder order_assign update  error:", err)
+		return "程序错误"
+	}
+
+	for _, v := range workers {
+		if _, err = p.o.Insert(&v); err != nil {
+			p.o.Rollback()
+			seelog.Error("Mysqlsvr::AssignOrder order_assign insert error:", err)
+			return "程序错误"
+		}
+	}
+	p.o.Commit()
+	return ""
+}
+
+func (p *Mysqlsvr) GetOrderAssign(idx string) []orm.Params {
+	var maps []orm.Params
+	sql := "select `order_assign`.`phone`, `worker`.`idx`, `worker`.`name`, `worker`.`class` from `order_assign` join `worker` on `order_assign`.`order_idx`=? and `order_assign`.`worker_idx`=`worker`.`idx` and `order_assign`.`status`=?;"
+	_, err := p.o.Raw(sql, idx, structure.ORDER_ASSIGN_SAVE).Values(&maps)
+	if err != nil {
+		seelog.Error("Mysqlsvr::GetOrderAssign  err:", err)
+	}
+	return maps
 }
 
 func (p *Mysqlsvr) ServiceFinishOrder(order *structure.Order) bool {

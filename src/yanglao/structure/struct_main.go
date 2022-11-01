@@ -26,6 +26,7 @@ type Client struct {
 	Healthy      string `orm:"type(text)"`
 	Remarks      string `orm:"type(text)"`
 	Handler      string
+	Avatar       string `orm:"null"`
 	RegisterTime time.Time
 	InDbTime     time.Time
 }

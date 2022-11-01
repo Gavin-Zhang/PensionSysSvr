@@ -38,7 +38,9 @@ func (p *Mysqlsvr) connect() error {
 		new(structure.Worker),
 		new(structure.WorkerClass),
 		new(structure.ConsumptionType),
-		new(structure.PaymentType))
+		new(structure.PaymentType),
+		new(structure.OrderAssign))
+
 	orm.RegisterDataBase("default", "mysql", static.Db.Conn)
 
 	err := orm.RunSyncdb("default", false, true)

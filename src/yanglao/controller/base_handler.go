@@ -34,6 +34,11 @@ func cors(w *http.ResponseWriter, r *http.Request) {
 	base.Cors(w, r)
 }
 
+func filecors(w *http.ResponseWriter, r *http.Request) {
+	r.ParseMultipartForm(128)
+	base.Cors(w, r)
+}
+
 func checkSession(w http.ResponseWriter, r *http.Request) *single.Player {
 	player := single.PlayerMgr.GetByRequest(r)
 	if player == nil {
