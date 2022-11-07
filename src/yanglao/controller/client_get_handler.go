@@ -20,6 +20,43 @@ type Clients struct {
 	Data  []*structure.Client
 }
 
+func GetClientHandler(w http.ResponseWriter, r *http.Request) {
+	cors(&w, r)
+
+	if checkSession(w, r) == nil {
+		seelog.Error("GetClientHandler not find player by cookie")
+		sendErr(w, constant.ResponseCode_CookieErr, "cookie error")
+		return
+	}
+
+	if !checkNotEmptyParams(r, []string{"idx"}) {
+		seelog.Error("GetClientHandler checkNotEmptyParams fail")
+		sendErr(w, constant.ResponseCode_ParamErr, "信息不全")
+		return
+	}
+
+	ret, err := gonet.CallByName("mysqlsvr", "GetClient", r.FormValue("idx"))
+	if err != nil {
+		seelog.Error("GetClientHandler call mysqlsvr function GetClient err:", err)
+		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
+		return
+	}
+
+	client := new(structure.Client)
+	if err = goutils.ExpandResult(ret, &client); err != nil {
+		seelog.Error("GetClientHandler ExpandResult err:", err)
+		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
+		return
+	}
+
+	var back BackInfo
+	back.Code = constant.ResponseCode_Success
+	back.Count = 1
+	back.Data = make([]interface{}, 1)
+	back.Data[0] = client
+	sendback(w, back)
+}
+
 func GetClientsHandler(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	base.Cors(&w, r)

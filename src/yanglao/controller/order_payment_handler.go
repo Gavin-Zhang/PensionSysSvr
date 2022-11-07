@@ -34,6 +34,7 @@ func OrderPaymentHandler(w http.ResponseWriter, r *http.Request) {
 		Idx:           r.FormValue("idx"),
 		PaymentStatus: structure.ORDER_PAY_STATUS_OVER,
 		OrderStatus:   structure.ORDER_STATUS_FINISHED,
+		PaymentTime:   time.Now(),
 		FinishTime:    time.Now()}
 
 	value, err := time.ParseInLocation("2006-01-02", r.FormValue("paymenttime"), time.Local)
@@ -79,7 +80,25 @@ func OrderPaymentHandler(w http.ResponseWriter, r *http.Request) {
 		order.PaymentType = r.FormValue("paymenttype")
 	}
 
-	ret, err := DoFinish(&order, consumptiontype)
+	ret, err := gonet.CallByName("mysqlsvr", "GetOrder", order.Idx)
+	if err != nil {
+		seelog.Error("OrderPaymentHandler call mysqlsvr function GetOrder err:", err)
+		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
+		return
+	}
+	order_data := new(structure.Order)
+	if err = goutils.ExpandResult(ret, &order_data); err != nil || order_data == nil {
+		seelog.Error("OrderPaymentHandler goutils.ExpandResult err:", err)
+		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
+		return
+	}
+	if order_data.OrderStatus != structure.ORDER_STATUS_WAIT_PAY {
+		seelog.Error("OrderPaymentHandler check order status fail")
+		sendErr(w, constant.ResponseCode_ParamErr, "工单状态不对")
+		return
+	}
+
+	ret, err = DoFinish(&order, consumptiontype)
 	if err != nil {
 		seelog.Error("OrderPaymentHandler call mysqlsvr function FinisOrder err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
@@ -103,5 +122,5 @@ func DoFinish(order *structure.Order, consumptionType string) ([]interface{}, er
 	}
 	return gonet.CallByName("mysqlsvr", "FinisOrder", order,
 		"order_status", "finish_time", "payment_status",
-		"payment_type", "charge", "fare", "high_rise")
+		"payment_type", "charge", "fare", "high_rise", "payment_time")
 }

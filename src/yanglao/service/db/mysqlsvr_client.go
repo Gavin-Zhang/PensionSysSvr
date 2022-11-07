@@ -48,10 +48,18 @@ func (p *Mysqlsvr) RegisterClient(client *structure.Client) bool {
 	return true
 }
 
+func (p *Mysqlsvr) GetClient(idx string) *structure.Client {
+	client := new(structure.Client)
+	if err := p.o.QueryTable("client").Filter("idx", idx).One(client); err != nil {
+		seelog.Error("Mysqlsvr::GetClient err: ", err)
+		return nil
+	}
+	return client
+}
+
 func (p *Mysqlsvr) GetClients(page int, limit int, condition map[string]string) controller.Clients {
 	var clients []*structure.Client
 
-	seelog.Info(condition)
 	qs := p.o.QueryTable("client")
 	for k, v := range condition {
 		qs = qs.Filter(k, v)

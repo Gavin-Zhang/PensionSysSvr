@@ -17,13 +17,11 @@ type PaymentType struct {
 }
 
 type Order struct {
-	Idx       string `orm:"pk"` //工单编号
-	ClientIdx string `orm:"description(老人编号)"`
-	Name      string //老人名字
-	Phone     string //联系电话
-	ChinaId   string // 身份证
-	//Waiter          string    `orm:"null"` //服务人员
-	//WaiterPhone     string    `orm:"null"` //服务人员联系电话
+	Idx             string    `orm:"pk"` //工单编号
+	ClientIdx       string    `orm:"description(老人编号)"`
+	Name            string    //老人名字
+	Phone           string    //联系电话
+	ChinaId         string    // 身份证
 	Service         string    `orm:"description(服务项目)"`
 	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府购买，积分，赠送...]
 	Charge          int16     `orm:"description(服务费用)"`
@@ -53,6 +51,12 @@ type OrderAssign struct {
 	Phone       string
 	Handler     string
 	HandlerTime time.Time `orm:"auto_now_add"`
+}
+
+type OrderEvaluation struct {
+	OrderIdx string `orm:"pk"`
+	Attitude string `orm:"description(服务态度)"`
+	Quality  string `orm:"description(服务质量)"`
 }
 
 // 工单状态

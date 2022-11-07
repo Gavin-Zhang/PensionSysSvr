@@ -23,12 +23,17 @@ func OrderServiceFinishHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	params := []string{"idx", "servicebegin", "serviceend"}
+	params := []string{"idx", "servicebegin", "serviceend", "attitude", "quality"}
 	if !checkNotEmptyParams(r, params) {
 		seelog.Error("OrderServiceFinishHandler checkNotEmptyParams fail")
 		sendErr(w, constant.ResponseCode_ParamErr, "信息不全")
 		return
 	}
+
+	evaluation := structure.OrderEvaluation{
+		OrderIdx: r.FormValue("idx"),
+		Attitude: r.FormValue("attitude"),
+		Quality:  r.FormValue("quality")}
 
 	order := structure.Order{
 		Idx:         r.FormValue("idx"),
@@ -49,7 +54,7 @@ func OrderServiceFinishHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	order.EndTime = value
 
-	ret, err := gonet.CallByName("mysqlsvr", "ServiceFinishOrder", &order)
+	ret, err := gonet.CallByName("mysqlsvr", "ServiceFinishOrder", &order, &evaluation)
 	if err != nil {
 		seelog.Error("OrderServiceFinishHandler call mysqlsvr function ServiceFinishOrder err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

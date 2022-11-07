@@ -13,6 +13,7 @@ type Httpsvr_cli struct {
 func (p *Httpsvr_cli) Init(args string) {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/login", controller.LoginHandler)
+	mux.HandleFunc("/getclient", controller.GetClientHandler)
 	mux.HandleFunc("/getclients", controller.GetClientsHandler)
 	mux.HandleFunc("/register", controller.RegisterClientHandler)
 	mux.HandleFunc("/getserviceclass", controller.GetServiceClassHandler)
@@ -28,6 +29,7 @@ func (p *Httpsvr_cli) Init(args string) {
 	mux.HandleFunc("/getpaymenttype", controller.GetPaymentTypeHandler)
 	mux.HandleFunc("/orderserviced", controller.OrderServiceFinishHandler)
 	mux.HandleFunc("/orderpayment", controller.OrderPaymentHandler)
+	mux.HandleFunc("/orderevaluation", controller.GetOrderEvaluationHandler)
 
 	mux.HandleFunc("/uploadavatar", controller.UploadAvatarHandler)
 	mux.HandleFunc("/uploadphoto", controller.UpdataPhotoHandler)
