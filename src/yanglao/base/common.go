@@ -4,10 +4,11 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"net/http"
+	"yanglao/static"
 )
 
 func Cors(w *http.ResponseWriter, r *http.Request) {
-	(*w).Header().Set("Access-Control-Allow-Origin", "http://localhost")
+	(*w).Header().Set("Access-Control-Allow-Origin", static.HttpConfig.AllowOrigin /*"http://localhost"*/)
 	(*w).Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
 	(*w).Header().Add("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, Access-Control-Allow-Methods, Access-Control-Allow-Origin") //header的类型
 	(*w).Header().Add("Access-Control-Expose-Headers", "*")

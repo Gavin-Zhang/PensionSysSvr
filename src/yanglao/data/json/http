@@ -1,0 +1,6 @@
+{
+	"cookie_name": "bm-cookie",
+	"cookie_life": 86400000,
+	"domain": "localhost",
+	"allow_origin": "http://localhost"
+}

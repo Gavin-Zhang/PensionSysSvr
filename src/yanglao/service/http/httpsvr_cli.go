@@ -33,6 +33,8 @@ func (p *Httpsvr_cli) Init(args string) {
 
 	mux.HandleFunc("/uploadavatar", controller.UploadAvatarHandler)
 	mux.HandleFunc("/uploadphoto", controller.UpdataPhotoHandler)
+	mux.HandleFunc("/getphotos", controller.GetPhotosHandler)
+	mux.HandleFunc("/deletephoto", controller.DeletePhotosHandler)
 
 	mux.Handle("/avatarphoto/", http.StripPrefix("/avatarphoto/", http.FileServer(http.Dir("avatar"))))
 	mux.Handle("/imagephoto/", http.StripPrefix("/imagephoto/", http.FileServer(http.Dir("photo"))))

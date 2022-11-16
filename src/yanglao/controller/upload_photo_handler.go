@@ -39,6 +39,17 @@ func UpdataPhotoHandler(w http.ResponseWriter, r *http.Request) {
 		sendErr(w, constant.ResponseCode_ParamErr, "参数错误")
 		return
 	}
+	clientidxs, ok := mform.Value["clientidx"]
+	if !ok {
+		seelog.Error("UpdataPhotoHandler not find clientidx in param")
+		sendErr(w, constant.ResponseCode_ParamErr, "缺少参数")
+		return
+	}
+	if len(clientidxs) == 0 {
+		seelog.Error("UpdataPhotoHandler clientidx array len == 0")
+		sendErr(w, constant.ResponseCode_ParamErr, "参数错误")
+		return
+	}
 
 	_, ok = mform.File["file"]
 	if !ok {
@@ -59,7 +70,7 @@ func UpdataPhotoHandler(w http.ResponseWriter, r *http.Request) {
 	ext := path.Ext(fileHeader.Filename)
 	if ext != ".jpg" {
 		seelog.Error("UpdataPhotoHandler image format error")
-		sendErr(w, constant.ResponseCode_ParamErr, "头像格式错误")
+		sendErr(w, constant.ResponseCode_ParamErr, "照片格式错误")
 		return
 	}
 	_, err = jpeg.Decode(file)
@@ -70,8 +81,8 @@ func UpdataPhotoHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	file.Seek(0, 0)
 
-	dir := fmt.Sprintf("avatar/%x", md5.Sum([]byte(idxs[0])))
-	err = os.Mkdir(dir, os.ModePerm)
+	dir := fmt.Sprintf("photo/%x/%s", md5.Sum([]byte(clientidxs[0])), idxs[0])
+	err = os.MkdirAll(dir, os.ModePerm)
 	if err != nil {
 		if os.IsNotExist(err) {
 			seelog.Error("UpdataPhotoHandler create dir error:", err)

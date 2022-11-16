@@ -5,8 +5,8 @@ import (
 	_ "yanglao/service"
 	_ "yanglao/service/db"
 	_ "yanglao/service/http"
-	_ "yanglao/single"
 
+	"yanglao/single"
 	"yanglao/static"
 
 	"github.com/cihub/seelog"
@@ -19,5 +19,6 @@ func main() {
 	initSeelog("")
 
 	static.Init()
+	single.Init()
 	gonet.Run("Mainsvr", 10, true)
 }

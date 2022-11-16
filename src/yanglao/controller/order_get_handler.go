@@ -46,7 +46,8 @@ func GetOrdersHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	ret, err := gonet.CallByName("mysqlsvr", "GetOrders", page, limit, make(map[string]string))
+	condition := GetOrderConditionMap(r)
+	ret, err := gonet.CallByName("mysqlsvr", "GetOrders", page, limit, condition)
 	if err != nil {
 		seelog.Error("GetClientsHandler call mysqlsvr function GetClients err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
@@ -67,4 +68,18 @@ func GetOrdersHandler(w http.ResponseWriter, r *http.Request) {
 	back.Data = make([]interface{}, 1)
 	back.Data[0] = orders.Data
 	sendback(w, back)
+}
+
+func GetOrderConditionMap(r *http.Request) map[string]string {
+	condition := make(map[string]string)
+	if r.FormValue("name") != "" {
+		condition["name"] = r.FormValue("name")
+	}
+	if r.FormValue("phone") != "" {
+		condition["phone"] = r.FormValue("phone")
+	}
+	if r.FormValue("orderidx") != "" {
+		condition["idx"] = r.FormValue("orderidx")
+	}
+	return condition
 }

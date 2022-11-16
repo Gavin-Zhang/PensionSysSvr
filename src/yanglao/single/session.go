@@ -11,6 +11,8 @@ import (
 	"sync"
 	"time"
 
+	"yanglao/static"
+
 	"github.com/cihub/seelog"
 )
 
@@ -100,7 +102,7 @@ type SessionMemoryMgr struct {
 
 func newFromMemory() *SessionMemoryMgr {
 	return &SessionMemoryMgr{
-		life: 60 * 30 * 1000,
+		life: static.HttpConfig.CookieLife, //60 * 30 * 1000,
 		//life:     60 * 1 * 1000,
 		sessions: make(map[string]Session, 0),
 	}
@@ -116,7 +118,7 @@ func (fm *SessionMemoryMgr) InitSession(sid string) (Session, error) {
 	newSession.last = time.Now()
 
 	fm.sessions[sid] = newSession //内存管理map
-	seelog.Info("InitSession:", sid, fm.sessions)
+	//seelog.Info("InitSession:", sid, fm.sessions)
 	return newSession, nil
 }
 
@@ -151,20 +153,14 @@ func (fm *SessionMemoryMgr) GCSession() {
 
 	sessions := fm.sessions
 
-	//fmt.Println("gc session")
-
 	if len(sessions) < 1 {
 		return
 	}
-
-	//fmt.Println("current active sessions ", sessions)
 
 	for k, v := range sessions {
 		t := (v.(*Session4Memory).last.Unix()) + (fm.life / 1000)
 
 		if t <= time.Now().Unix() { //超时了
-
-			fmt.Println("timeout-------->", v)
 			delete(fm.sessions, k)
 			seelog.Info("GCSession", k)
 		}
@@ -192,7 +188,7 @@ type SessionManager struct {
 
 func NewSessionManager() *SessionManager {
 	sessionMgr := &SessionManager{
-		cookieName: "bm-cookie",
+		cookieName: static.HttpConfig.CookieName, //"bm-cookie",
 		storage:    newFromMemory(),
 	}
 	go sessionMgr.GC()
@@ -219,7 +215,7 @@ func (m *SessionManager) BeginSession(w http.ResponseWriter, r *http.Request) Se
 			//这里是并发不安全的，但是这个方法已上锁
 			Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
 			Path:     "/",
-			Domain:   "localhost",
+			Domain:   static.HttpConfig.Domain, //"localhost",
 			HttpOnly: false,
 			MaxAge:   int(m.storage.GetMaxLife() / 1000),
 			Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
@@ -242,7 +238,7 @@ func (m *SessionManager) BeginSession(w http.ResponseWriter, r *http.Request) Se
 				//这里是并发不安全的，但是这个方法已上锁
 				Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
 				Path:     "/",
-				Domain:   "localhost",
+				Domain:   static.HttpConfig.Domain, //"localhost",
 				HttpOnly: false,
 				MaxAge:   int(m.storage.GetMaxLife() / 1000),
 				Expires:  newSession.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
@@ -250,7 +246,6 @@ func (m *SessionManager) BeginSession(w http.ResponseWriter, r *http.Request) Se
 			http.SetCookie(w, &newCookie) //设置到响应中
 			return newSession
 		}
-		fmt.Println("-----------> current session exists")
 		return session
 	}
 
@@ -290,14 +285,11 @@ func (m *SessionManager) randomId() string {
 }
 
 func (m *SessionManager) GetByRequest(r *http.Request) Session {
-	seelog.Info("GetByRequest", r)
 	cookie, err := r.Cookie(m.cookieName)
-	seelog.Info("GetByRequest cookie 1", cookie)
 	if err != nil || cookie.Value == "" {
 		return nil
 	}
 	se, err := url.QueryUnescape(cookie.Value)
-	seelog.Info("GetByRequest cookie 2", se)
 	return m.storage.GetSession(se)
 }
 
@@ -319,7 +311,7 @@ func (m *SessionManager) SetCookie(w http.ResponseWriter, sessionid string) {
 		Name:     m.cookieName,
 		Value:    url.QueryEscape(session.SessionID()), //转义特殊符号@#￥%+*-等
 		Path:     "/",
-		Domain:   "localhost",
+		Domain:   static.HttpConfig.Domain, //"localhost",
 		HttpOnly: false,
 		MaxAge:   int(m.storage.GetMaxLife() / 1000),
 		Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
@@ -329,6 +321,6 @@ func (m *SessionManager) SetCookie(w http.ResponseWriter, sessionid string) {
 
 var SessionMgr *SessionManager
 
-func init() {
-	SessionMgr = NewSessionManager()
-}
+//func init() {
+//	SessionMgr = NewSessionManager()
+//}

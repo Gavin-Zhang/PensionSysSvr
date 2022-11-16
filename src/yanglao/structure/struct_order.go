@@ -21,7 +21,7 @@ type Order struct {
 	ClientIdx       string    `orm:"description(老人编号)"`
 	Name            string    //老人名字
 	Phone           string    //联系电话
-	ChinaId         string    // 身份证
+	ChinaId         string    //身份证
 	Service         string    `orm:"description(服务项目)"`
 	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府购买，积分，赠送...]
 	Charge          int16     `orm:"description(服务费用)"`
@@ -57,6 +57,13 @@ type OrderEvaluation struct {
 	OrderIdx string `orm:"pk"`
 	Attitude string `orm:"description(服务态度)"`
 	Quality  string `orm:"description(服务质量)"`
+}
+
+type OrderPhoto struct {
+	Name       string
+	Path       string
+	Size       int64
+	CreateTime time.Time
 }
 
 // 工单状态

@@ -133,6 +133,6 @@ func NewPlayerManager() *PlayerManager {
 	return mgr
 }
 
-func init() {
-	PlayerMgr = NewPlayerManager()
-}
+//func init() {
+//	PlayerMgr = NewPlayerManager()
+//}

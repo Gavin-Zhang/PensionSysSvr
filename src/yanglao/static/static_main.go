@@ -6,6 +6,8 @@ import (
 	"os"
 	"runtime/debug"
 	"time"
+
+	"github.com/cihub/seelog"
 )
 
 // Init 初始包内各个管理类
@@ -29,9 +31,10 @@ func Init() {
 		}
 	}()
 
-	fmt.Println("===================================================================")
+	seelog.Info("===================================================================")
 	Server.Init("data/json/server", true)
 	Db.Init("data/json/db", true)
 	MyConfig.Init("data/json/config", true)
-	fmt.Println("===================================================================")
+	HttpConfig.Init("data/json/http", true)
+	seelog.Info("===================================================================")
 }
