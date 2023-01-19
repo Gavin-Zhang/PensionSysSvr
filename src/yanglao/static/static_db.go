@@ -16,6 +16,11 @@ type Static_DB struct {
 	Indexs    []string `json:"index"`
 	IndexHead string   `json:"index_head"`
 	OrderHead string   `json:"order_head"`
+
+	EESConn      string   `json:"ees_db"`
+	EESIndexs    []string `json:"ees_roleidx"`
+	EESIndexHead string   `json:"ees_idxhead"`
+	EESRecord    string   `json:"ess_record"`
 }
 
 func (p *Static_DB) Init(path string, output bool) {

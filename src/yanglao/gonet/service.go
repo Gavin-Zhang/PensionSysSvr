@@ -53,6 +53,7 @@ func NewService(svrname string, args ...interface{}) uint32 {
 	}()
 
 	if svrInfoSet[svrname] == nil {
+		log.Printf("service:%s not register", svrname)
 		return 0
 	}
 

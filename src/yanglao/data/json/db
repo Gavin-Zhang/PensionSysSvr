@@ -1,6 +1,11 @@
 {
 	"db" : "root:bitgame@tcp(127.0.0.1:3306)/yanglao1?charset=utf8&parseTime=True&loc=Asia%2FShanghai",
 	"index" : ["roleIdx"],
-	"index_head": "WLB_",
-	"order_head": "GD"
+	"index_head": "HHC_",
+	"order_head": "GD",
+	
+	"ees_db" : "root:bitgame@tcp(127.0.0.1:3306)/sse?charset=utf8&parseTime=True&loc=Asia%2FShanghai",
+	"ees_roleidx" : ["roleIdx"],
+	"ees_idxhead": "EES_",
+	"ess_record": "ER"
 }

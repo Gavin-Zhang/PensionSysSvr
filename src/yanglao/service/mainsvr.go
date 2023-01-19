@@ -13,9 +13,13 @@ func (p *Mainsvr) Init(args string) {
 	wg := sync.WaitGroup{}
 
 	wg.Add(1)
-	p.NewService("Mysqlsvr", &wg)
-	p.NewService("Httpsvr_cli", "")
-	//p.NewService("Httpsvr_cli", "")
+	p.NewService("HccMysqlSvr", &wg)
+	wg.Add(1)
+	p.NewService("EesMysqlSvr", &wg)
+
+	p.NewService("HccHttpSvr", "")
+	p.NewService("EesHttpSvr", "")
+	//p.NewService("Httpsvr_svr", "")
 
 }
 

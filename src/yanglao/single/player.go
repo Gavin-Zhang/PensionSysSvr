@@ -5,7 +5,7 @@ import (
 	"sync"
 	"yanglao/gonet"
 
-	"yanglao/structure"
+	"yanglao/hcc/structure"
 
 	goutils "yanglao/gonet/utils"
 
@@ -23,6 +23,7 @@ type Player struct {
 	UserName string
 	Phone    string
 	Session  string `bson:"-"`
+	Power    uint32
 }
 
 const (
@@ -101,7 +102,7 @@ func (p *PlayerManager) Load(account, pwd string) *Player {
 		return nil
 	}
 
-	ret, err := gonet.CallByName("mysqlsvr", "Login", account, pwd)
+	ret, err := gonet.CallByName("HccMysqlSvr", "Login", account, pwd)
 	if err != nil {
 		panic(err)
 	}
@@ -120,6 +121,7 @@ func (p *PlayerManager) Load(account, pwd string) *Player {
 		Passwd:   user.PassWord,
 		UserName: user.UserName,
 		Phone:    user.Phone,
+		Power:    user.Power,
 		Session:  ""}
 	p.players.Add(&dbPlayer)
 	return &dbPlayer

@@ -1,11 +1,13 @@
 package main
 
 import (
-	"yanglao/gonet"
+	_ "yanglao/ees/service/db"
+	_ "yanglao/ees/service/http"
+	_ "yanglao/hcc/service/db"
+	_ "yanglao/hcc/service/http"
 	_ "yanglao/service"
-	_ "yanglao/service/db"
-	_ "yanglao/service/http"
 
+	"yanglao/gonet"
 	"yanglao/single"
 	"yanglao/static"
 
