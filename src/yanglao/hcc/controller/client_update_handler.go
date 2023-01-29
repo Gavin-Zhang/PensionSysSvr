@@ -25,7 +25,7 @@ func UpdateClientHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if !checkNotEmptyParams(r, []string{"idx", "chinaid", "name", "phone", "addr", "ascription",
-		"type", "healthdescription", "other", "contacts", "slow", "changecid"}) {
+		"type", "other", "contacts", "slow", "changecid"}) {
 		seelog.Error("HCC UpdateClientHandler checkNotEmptyParams fail")
 		sendErr(w, constant.ResponseCode_ParamErr, "信息不全")
 		return

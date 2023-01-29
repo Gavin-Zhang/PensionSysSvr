@@ -9,6 +9,8 @@ import (
 	"yanglao/base"
 	"yanglao/constant"
 	"yanglao/single"
+
+	"github.com/cihub/seelog"
 )
 
 type BackInfo struct {
@@ -71,7 +73,10 @@ func checkAll(w http.ResponseWriter, r *http.Request, power uint32) error {
 func checkNotEmptyParams(r *http.Request, params []string) bool {
 	for _, param := range params {
 		if r.FormValue(param) == "" {
-			return false
+			if vs := r.Form[param]; len(vs) == 0 {
+				seelog.Error("HCC checkNotEmptyParams not found param:", param)
+				return false
+			}
 		}
 	}
 	return true
