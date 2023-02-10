@@ -37,6 +37,8 @@ func (p *HccHttpSvr) Init(args string) {
 	mux.HandleFunc("/getphotos", controller.GetPhotosHandler)
 	mux.HandleFunc("/deletephoto", controller.DeletePhotosHandler)
 
+	mux.HandleFunc("/getsubsidytime", controller.GetSubsidyTime)
+
 	mux.Handle("/avatarphoto/", http.StripPrefix("/avatarphoto/", http.FileServer(http.Dir("image/hcc/avatar"))))
 	mux.Handle("/imagephoto/", http.StripPrefix("/imagephoto/", http.FileServer(http.Dir("image/hcc/photo"))))
 

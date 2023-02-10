@@ -6,8 +6,8 @@ import (
 
 	"yanglao/base"
 	"yanglao/constant"
-	"yanglao/single"
 	"yanglao/hcc/structure"
+	"yanglao/single"
 
 	"yanglao/gonet"
 	goutils "yanglao/gonet/utils"
@@ -107,6 +107,9 @@ func GetClientsHandler(w http.ResponseWriter, r *http.Request) {
 
 func GetClientConditionMap(r *http.Request) map[string]string {
 	condition := make(map[string]string)
+	if r.FormValue("idx") != "" {
+		condition["idx"] = r.FormValue("idx")
+	}
 	if r.FormValue("name") != "" {
 		condition["name"] = r.FormValue("name")
 	}
@@ -115,6 +118,15 @@ func GetClientConditionMap(r *http.Request) map[string]string {
 	}
 	if r.FormValue("chinaid") != "" {
 		condition["chinaid"] = r.FormValue("chinaid")
+	}
+	if r.FormValue("type") != "" {
+		condition["type"] = r.FormValue("type")
+	}
+	if r.FormValue("incapacity") != "" {
+		condition["incapacity"] = r.FormValue("incapacity")
+	}
+	if r.FormValue("ascription") != "" {
+		condition["community"] = r.FormValue("ascription")
 	}
 	return condition
 }

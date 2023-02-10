@@ -57,6 +57,7 @@ func RegisterClientHandler(w http.ResponseWriter, r *http.Request) {
 	client.Community = r.FormValue("ascription")
 	client.Type = r.FormValue("type")
 	client.Healthy = r.FormValue("healthdescription")
+	client.Incapacity = r.FormValue("incapacity")
 	client.Remarks = r.FormValue("other")
 	client.Handler = r.FormValue("registrant")
 	client.InDbTime = time.Now()

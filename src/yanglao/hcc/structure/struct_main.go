@@ -24,6 +24,7 @@ type Client struct {
 	Contacts     string `orm:"type(text)"`
 	SlowIll      string
 	Healthy      string `orm:"type(text)"`
+	Incapacity   string `orm:"type(text)"`
 	Remarks      string `orm:"type(text)"`
 	Handler      string
 	Avatar       string `orm:"null"`
