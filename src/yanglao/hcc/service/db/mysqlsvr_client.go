@@ -99,7 +99,7 @@ func (p *HccMysqlSvr) SetAvatar(idx string, avatar string) bool {
 
 func (p *HccMysqlSvr) UpdateClient(client *structure.Client, change_chinaid bool) bool {
 	_, err := p.o.Update(client, "china_id", "name", "phone", "addr",
-		"type", "community", "healthy", "remarks", "contacts", "slow_ill")
+		"type", "community", "healthy", "remarks", "contacts", "slow_ill", "incapacity")
 	if err != nil {
 		seelog.Error("HccMysqlSvr::UpdateClient err: ", err)
 		return false
