@@ -69,8 +69,11 @@ func GetWorkersHandler(w http.ResponseWriter, r *http.Request) {
 
 func GetWorkerConditionMap(r *http.Request) map[string]string {
 	condition := make(map[string]string)
-	if r.FormValue("service") != "" {
-		condition["service"] = r.FormValue("service")
+	if r.FormValue("name") != "" {
+		condition["name"] = r.FormValue("name")
+	}
+	if r.FormValue("phone") != "" {
+		condition["phone"] = r.FormValue("phone")
 	}
 	if r.FormValue("class") != "" {
 		condition["class"] = r.FormValue("class")
