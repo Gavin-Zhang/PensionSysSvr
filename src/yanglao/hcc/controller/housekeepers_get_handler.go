@@ -4,73 +4,68 @@ import (
 	"net/http"
 	"strconv"
 
-	"yanglao/base"
 	"yanglao/constant"
-	"yanglao/hcc/structure"
-	"yanglao/single"
-
 	"yanglao/gonet"
+	"yanglao/hcc/structure"
+
 	goutils "yanglao/gonet/utils"
 
 	"github.com/cihub/seelog"
 )
 
-type Workers struct {
-	Count int
-	Data  []*structure.Worker
-}
+func GetHouseKeepersHandler(w http.ResponseWriter, r *http.Request) {
+	cors(&w, r)
 
-func GetWorkersHandler(w http.ResponseWriter, r *http.Request) {
-	r.ParseForm()
-	base.Cors(&w, r)
-
-	player := single.PlayerMgr.GetByRequest(r)
-	if player == nil {
+	if checkSession(w, r) == nil {
+		seelog.Error("GetHouseKeeperHandler not find player by cookie")
 		sendErr(w, constant.ResponseCode_CookieErr, "cookie error")
-		seelog.Error("GetWorkersHandler not find player by cookie")
 		return
 	}
-	single.SessionMgr.SetCookie(w, player.Session)
+
+	if !checkNotEmptyParams(r, []string{"page", "limit"}) {
+		seelog.Error("GetHouseKeepersHandler checkNotEmptyParams fail")
+		sendErr(w, constant.ResponseCode_ParamErr, "信息不全")
+		return
+	}
 
 	page, err := strconv.Atoi(r.FormValue("page"))
 	if err != nil {
-		seelog.Error("GetWorkersHandler page err:", err)
+		seelog.Error("GetHouseKeepersHandler page err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
 
 	limit, err := strconv.Atoi(r.FormValue("limit"))
 	if err != nil {
-		seelog.Error("GetWorkersHandler limit err:", err)
+		seelog.Error("GetHouseKeepersHandler limit err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
 
-	condition := GetWorkerConditionMap(r)
-	ret, err := gonet.CallByName("HccMysqlSvr", "GetWorkers", page, limit, condition)
+	ret, err := gonet.CallByName("HccMysqlSvr", "GetHouseKeepers", page, limit, GetHouseKeeperConditionMap(r))
 	if err != nil {
-		seelog.Error("GetWorkersHandler call HccMysqlSvr function GetWorkers err:", err)
+		seelog.Error("GetHouseKeepersHandler call HccMysqlSvr function GetHouseKeepers err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
 
-	var workers Workers
-	err = goutils.ExpandResult(ret, &workers)
+	var keepers []*structure.HouseKeeper
+	err = goutils.ExpandResult(ret, &keepers)
 	if err != nil {
-		seelog.Error("GetWorkersHandler ExpandResult err:", err)
+		seelog.Error("GetHouseKeepersHandler ExpandResult err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
 		return
 	}
 
 	var back BackInfo
 	back.Code = constant.ResponseCode_Success
-	back.Count = workers.Count
+	back.Count = len(keepers)
 	back.Data = make([]interface{}, 1)
-	back.Data[0] = workers.Data
+	back.Data[0] = keepers
 	sendback(w, back)
 }
 
-func GetWorkerConditionMap(r *http.Request) map[string]string {
+func GetHouseKeeperConditionMap(r *http.Request) map[string]string {
 	condition := make(map[string]string)
 	if r.FormValue("service") != "" {
 		condition["service"] = r.FormValue("service")

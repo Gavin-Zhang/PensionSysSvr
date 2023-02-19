@@ -179,3 +179,15 @@ func (p *HccMysqlSvr) GetOrderEvaluation(orderidx string) *structure.OrderEvalua
 	}
 	return evaluation
 }
+
+///////////////////////////////////////////////////////////////////////////////
+func (p *HccMysqlSvr) GetOrderFromTypeList() []*structure.OrderFromType {
+	var list []*structure.OrderFromType
+
+	_, err := p.o.QueryTable("order_from_type").All(&list)
+	if err != nil {
+		seelog.Error("HccMysqlSvr::GetOrderFromTypeList  err:", err)
+	}
+
+	return list
+}

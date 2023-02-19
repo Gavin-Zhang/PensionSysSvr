@@ -9,8 +9,8 @@ import (
 
 	"yanglao/constant"
 	"yanglao/gonet"
-	"yanglao/static"
 	"yanglao/hcc/structure"
+	"yanglao/static"
 
 	goutils "yanglao/gonet/utils"
 
@@ -39,6 +39,8 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 		Handler:         r.FormValue("handler"),
 		ConsumptionType: r.FormValue("consumptiontype"),
 		ChinaId:         r.FormValue("chinaid"),
+		FromType:        r.FormValue("fromtype"),
+		HouseKeeper:     r.FormValue("housekeeper"),
 		OrderStatus:     structure.ORDER_STATUS_WAIT_ASSIGN,
 		PaymentStatus:   structure.ORDER_PAY_STATUS_WAIT}
 

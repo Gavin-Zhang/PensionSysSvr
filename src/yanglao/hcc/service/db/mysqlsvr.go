@@ -40,7 +40,9 @@ func (p *HccMysqlSvr) connect() error {
 		new(structure.ConsumptionType),
 		new(structure.PaymentType),
 		new(structure.OrderAssign),
-		new(structure.OrderEvaluation))
+		new(structure.OrderEvaluation),
+		new(structure.OrderFromType),
+		new(structure.HouseKeeper))
 
 	orm.RegisterDataBase("default", "mysql", static.Db.Conn)
 

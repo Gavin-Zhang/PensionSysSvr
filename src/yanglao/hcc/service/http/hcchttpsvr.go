@@ -32,6 +32,10 @@ func (p *HccHttpSvr) Init(args string) {
 	mux.HandleFunc("/orderpayment", controller.OrderPaymentHandler)
 	mux.HandleFunc("/orderevaluation", controller.GetOrderEvaluationHandler)
 
+	mux.HandleFunc("/orderformtype", controller.GetOrderFromTypeHandler)
+
+	mux.HandleFunc("/gethousekeepers", controller.GetHouseKeepersHandler)
+
 	mux.HandleFunc("/uploadavatar", controller.UploadAvatarHandler)
 	mux.HandleFunc("/uploadphoto", controller.UpdataPhotoHandler)
 	mux.HandleFunc("/getphotos", controller.GetPhotosHandler)

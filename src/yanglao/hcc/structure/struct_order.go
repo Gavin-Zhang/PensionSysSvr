@@ -23,7 +23,7 @@ type Order struct {
 	Phone           string    //联系电话
 	ChinaId         string    //身份证
 	Service         string    `orm:"description(服务项目)"`
-	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府购买，积分，赠送...]
+	ConsumptionType string    `orm:"description(消费类型)"` //[自费，政府补贴]
 	Charge          int16     `orm:"description(服务费用)"`
 	Fare            int16     `orm:"description(车费)"`
 	HighRise        float32   `orm:"description(步梯高层费用)"`
@@ -33,6 +33,8 @@ type Order struct {
 	OrderStatus     string    //工单状态
 	PaymentStatus   string    //支付状态
 	PaymentType     string    `orm:"null"` //支付方式
+	FromType        string    `orm:"description(订单来源)"`
+	HouseKeeper     string    `orm:"description(社区管家)"`
 	Handler         string    //下单人
 	Remarks         string    `orm:"type(text);null"` //备注
 	Created         time.Time `orm:"auto_now_add"`
@@ -64,6 +66,11 @@ type OrderPhoto struct {
 	Path       string
 	Size       int64
 	CreateTime time.Time
+}
+
+type OrderFromType struct {
+	Id   int `orm:"pk;auto"`
+	Type string
 }
 
 // 工单状态
