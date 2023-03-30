@@ -69,13 +69,16 @@ func GetRecordsHandler(w http.ResponseWriter, r *http.Request) {
 func GetOrderConditionMap(r *http.Request) map[string]string {
 	condition := make(map[string]string)
 	if r.FormValue("name") != "" {
-		condition["name"] = r.FormValue("name")
+		condition["name__icontains"] = r.FormValue("name")
 	}
 	if r.FormValue("phone") != "" {
 		condition["phone"] = r.FormValue("phone")
 	}
 	if r.FormValue("orderidx") != "" {
 		condition["idx"] = r.FormValue("orderidx")
+	}
+	if r.FormValue("yearmonth") != "" {
+		condition["begin_time__istartswith"] = r.FormValue("yearmonth")
 	}
 	return condition
 }
