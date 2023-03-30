@@ -52,6 +52,17 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	order.ServiceTime = value
 
+	order.Charge = 0
+	if r.FormValue("charge") != "" {
+		value, err := strconv.ParseInt(r.FormValue("charge"), 10, 16)
+		if err != nil {
+			seelog.Error("AddOrderHandler strconv.ParseInt(charge) err:", err)
+			sendErr(w, constant.ResponseCode_ParamErr, "车费不合法")
+			return
+		}
+		order.Charge = int16(value)
+	}
+
 	order.Fare = 0
 	if r.FormValue("fare") != "" {
 		value, err := strconv.ParseInt(r.FormValue("fare"), 10, 16)
