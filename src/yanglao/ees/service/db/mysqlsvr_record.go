@@ -27,7 +27,7 @@ func (p *EesMysqlSvr) GetRecords(page int, limit int, condition map[string]strin
 	}
 
 	q := qs
-	_, err := q.Limit(limit, (page-1)*limit).OrderBy("-created").All(&Records)
+	_, err := q.Limit(limit, (page-1)*limit).OrderBy("-begin_time").All(&Records)
 	if err != nil {
 		seelog.Error("EesMysqlSvr::GetRecords 1 err:", err)
 		return controller.Records{}

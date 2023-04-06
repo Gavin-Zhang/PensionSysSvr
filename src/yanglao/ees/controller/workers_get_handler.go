@@ -70,7 +70,7 @@ func GetWorkersHandler(w http.ResponseWriter, r *http.Request) {
 func GetWorkerConditionMap(r *http.Request) map[string]string {
 	condition := make(map[string]string)
 	if r.FormValue("name") != "" {
-		condition["name"] = r.FormValue("name")
+		condition["name__icontains"] = r.FormValue("name")
 	}
 	if r.FormValue("phone") != "" {
 		condition["phone"] = r.FormValue("phone")

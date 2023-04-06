@@ -79,6 +79,7 @@ const (
 	ORDER_STATUS_WAIT_SERVICE = "待服务"
 	ORDER_STATUS_WAIT_PAY     = "待支付"
 	ORDER_STATUS_FINISHED     = "已完成"
+	ORDER_STATUS_CANCEL       = "已取消"
 )
 
 // 支付状态
