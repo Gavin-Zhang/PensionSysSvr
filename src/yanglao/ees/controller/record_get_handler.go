@@ -80,5 +80,8 @@ func GetOrderConditionMap(r *http.Request) map[string]string {
 	if r.FormValue("yearmonth") != "" {
 		condition["begin_time__istartswith"] = r.FormValue("yearmonth")
 	}
+	if r.FormValue("yearmonthday") != "" {
+		condition["begin_time__istartswith"] = r.FormValue("yearmonthday")
+	}
 	return condition
 }
