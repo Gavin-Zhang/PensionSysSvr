@@ -27,6 +27,7 @@ type Order struct {
 	Charge          int16     `orm:"description(服务费用)"`
 	Fare            int16     `orm:"description(车费)"`
 	HighRise        float32   `orm:"description(步梯高层费用)"`
+	Count           string    `orm:"description(数量)"`
 	ServiceTime     time.Time //预定服务时间
 	Addr            string    //地址
 	Community       string    //所属社区

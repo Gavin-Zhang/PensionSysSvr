@@ -35,6 +35,7 @@ func AddOrderHandler(w http.ResponseWriter, r *http.Request) {
 		Community:       r.FormValue("ascription"),
 		Addr:            r.FormValue("addr"),
 		Service:         r.FormValue("service"),
+		Count:           r.FormValue("count"),
 		Remarks:         r.FormValue("remarks"),
 		Handler:         r.FormValue("handler"),
 		ConsumptionType: r.FormValue("consumptiontype"),
