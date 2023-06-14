@@ -22,6 +22,8 @@ func (p *HccHttpSvr) Init(args string) {
 	mux.HandleFunc("/getworkerclass", controller.GetWorkerClassHandler)
 	mux.HandleFunc("/getworkers", controller.GetWorkersHandler)
 
+	mux.HandleFunc("/addworker", controller.AddWorkerHandler)
+
 	mux.HandleFunc("/getconsumptiontypes", controller.GetConsumptionTypeHandler)
 	mux.HandleFunc("/getorders", controller.GetOrdersHandler)
 	mux.HandleFunc("/addorder", controller.AddOrderHandler)

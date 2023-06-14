@@ -7,6 +7,21 @@ import (
 	"github.com/cihub/seelog"
 )
 
+func (p *HccMysqlSvr) AddWorker(worker *structure.Worker) string {
+	info := new(structure.Worker)
+	err := p.o.QueryTable("worker").Filter("china_id", worker.ChinaId).Filter("class", worker.Class).Limit(1).One(info)
+	if err == nil {
+		return "重复注册"
+	}
+
+	_, err = p.o.Insert(worker)
+	if err != nil {
+		seelog.Error("HccMysqlSvr::AddWorker err: ", err)
+		return err.Error()
+	}
+	return ""
+}
+
 func (p *HccMysqlSvr) GetWorkerClassList() []*structure.WorkerClass {
 	var list []*structure.WorkerClass
 
