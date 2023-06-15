@@ -64,9 +64,9 @@ func (p *EesMysqlSvr) RegisterClient(client *structure.Client) string {
 	return ""
 }
 
-func (p *EesMysqlSvr) GetClient(idx string) *structure.Client {
+func (p *EesMysqlSvr) GetClient(key string, value string) *structure.Client {
 	client := new(structure.Client)
-	if err := p.o.QueryTable("client").Filter("idx", idx).One(client); err != nil {
+	if err := p.o.QueryTable("client").Filter(key, value).One(client); err != nil {
 		seelog.Error("EesMysqlSvr::GetClient err: ", err)
 		return nil
 	}
