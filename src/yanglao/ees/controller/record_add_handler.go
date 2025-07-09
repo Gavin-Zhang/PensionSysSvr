@@ -6,7 +6,7 @@ import (
 	//"strconv"
 	"strings"
 	"time"
-	"utils"
+	"yanglao/utils"
 
 	"yanglao/constant"
 	"yanglao/ees/structure"
@@ -65,6 +65,7 @@ func AddRecordHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ret, err := gonet.CallByName("EesMysqlSvr", "AddRecord", &record, workers)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_AddRecord", &record, workers)
 	if err != nil {
 		seelog.Error("EES AddRecordHandler call EesMysqlSvr function AddRecord err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

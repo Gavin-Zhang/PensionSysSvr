@@ -5,6 +5,7 @@ import (
 	"yanglao/hcc/controller"
 	"yanglao/hcc/structure"
 
+	//"github.com/beego/beego/v2/client/orm"
 	"yanglao/gonet/orm"
 
 	"github.com/cihub/seelog"
@@ -91,10 +92,12 @@ func (p *HccMysqlSvr) AssignOrder(orderidx string, workers []structure.OrderAssi
 	order := structure.Order{Idx: orderidx}
 	if err = p.o.Read(&order); err != nil {
 		seelog.Error("HccMysqlSvr::AssignOrder Read error: ", err)
+		p.o.Rollback()
 		return "程序错误"
 	}
 	if order.OrderStatus == structure.ORDER_STATUS_WAIT_PAY || order.OrderStatus == structure.ORDER_STATUS_FINISHED {
 		seelog.Error("HccMysqlSvr::AssignOrder status error")
+		p.o.Rollback()
 		return "状态已变更无法修改"
 	}
 	if order.AssignTime.IsZero() {
@@ -102,6 +105,7 @@ func (p *HccMysqlSvr) AssignOrder(orderidx string, workers []structure.OrderAssi
 		order.OrderStatus = structure.ORDER_STATUS_WAIT_SERVICE
 		if _, err = p.o.Update(&order, "assign_time", "order_status"); err != nil {
 			seelog.Error("HccMysqlSvr::AssignOrder order update error:", err)
+			p.o.Rollback()
 			return "状态已变更无法修改"
 		}
 	}
@@ -140,6 +144,7 @@ func (p *HccMysqlSvr) ServiceFinishOrder(order *structure.Order, evaluation *str
 	err := p.o.Begin()
 	if err != nil {
 		seelog.Error("HccMysqlSvr::ServiceFinishOrder Begin error: ", err)
+		p.o.Rollback()
 		return false
 	}
 	if _, err = p.o.Insert(evaluation); err != nil {

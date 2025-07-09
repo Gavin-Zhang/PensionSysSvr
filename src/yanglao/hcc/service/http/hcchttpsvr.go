@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"yanglao/gonet"
 	"yanglao/hcc/controller"
+	"yanglao/static"
 )
 
 type HccHttpSvr struct {
@@ -48,7 +49,7 @@ func (p *HccHttpSvr) Init(args string) {
 	mux.Handle("/avatarphoto/", http.StripPrefix("/avatarphoto/", http.FileServer(http.Dir("image/hcc/avatar"))))
 	mux.Handle("/imagephoto/", http.StripPrefix("/imagephoto/", http.FileServer(http.Dir("image/hcc/photo"))))
 
-	http.ListenAndServe("0.0.0.0:8001", mux)
+	http.ListenAndServe(static.HttpConfig.HCCPort, mux)
 }
 
 func init() {

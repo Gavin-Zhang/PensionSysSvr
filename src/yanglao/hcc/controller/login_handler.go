@@ -6,6 +6,8 @@ import (
 	"yanglao/base"
 	"yanglao/constant"
 	"yanglao/single"
+
+	"github.com/cihub/seelog"
 )
 
 //type LoginHandler struct {
@@ -19,12 +21,20 @@ type BackPlayer struct {
 }
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
-	r.ParseForm()
+	corsWithoutCredentials(&w, r)
+
+	//r.ParseForm()
 	account := r.FormValue("userName")
 	passwd := /*base.MD5(*/ r.FormValue("pswd") /*)*/
 
 	base.Cors(&w, r)
-
+	seelog.Info("=======================================")
+	seelog.Info("w:", w.Header())
+	seelog.Info("=======================================")
+	seelog.Info("r:", r.Header)
+	seelog.Info("=======================================")
+	seelog.Info("user:", account, "passwd:", passwd)
+	seelog.Info("=======================================")
 	player := single.PlayerMgr.Load(account, passwd)
 	var b BackInfo
 	b.Code = constant.ResponseCode_Fail

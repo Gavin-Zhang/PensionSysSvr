@@ -45,6 +45,7 @@ func GetWorkersHandler(w http.ResponseWriter, r *http.Request) {
 
 	condition := GetWorkerConditionMap(r)
 	ret, err := gonet.CallByName("EesMysqlSvr", "GetWorkers", page, limit, condition)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_GetWorkers", page, limit, condition)
 	if err != nil {
 		seelog.Error("EES GetWorkersHandler call EesMysqlSvr function GetWorkers err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

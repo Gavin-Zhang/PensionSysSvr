@@ -3,9 +3,9 @@ package static
 import (
 	"io/ioutil"
 
-	"utils"
+	"yanglao/utils"
 
-	us "utils/unmarshal"
+	us "yanglao/utils/unmarshal"
 )
 
 var MyConfig *Static_Config = &Static_Config{}

@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path"
-	"utils"
+	"yanglao/utils"
 
 	"yanglao/constant"
 
@@ -73,6 +73,7 @@ func UploadAvatarHandler(w http.ResponseWriter, r *http.Request) {
 
 	outname := fmt.Sprintf("%x", md5.Sum([]byte(idxs[0])))
 	ret, err := gonet.CallByName("EesMysqlSvr", "SetAvatar", idxs[0], outname)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_SetAvatar", idxs[0], outname)
 	if err != nil {
 		seelog.Error("EES UploadAvatarHandler call EesMysqlSvr function SetAvatar err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

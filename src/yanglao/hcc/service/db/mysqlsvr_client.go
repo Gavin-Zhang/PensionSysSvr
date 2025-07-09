@@ -5,10 +5,12 @@ import (
 	"strings"
 
 	"yanglao/constant"
-	"yanglao/gonet/orm"
 	"yanglao/hcc/controller"
 	"yanglao/hcc/structure"
 	"yanglao/static"
+
+	//"github.com/beego/beego/v2/client/orm"
+	"yanglao/gonet/orm"
 
 	"github.com/cihub/seelog"
 )

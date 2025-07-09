@@ -2,15 +2,17 @@ package controller
 
 import (
 	"net/http"
-	//"utils"
+	//"yanglao/utils"
 
 	"yanglao/constant"
 	"yanglao/gonet"
 	//"yanglao/static"
 	//"yanglao/hcc/structure"
 
-	"yanglao/gonet/orm"
 	goutils "yanglao/gonet/utils"
+
+	//"github.com/beego/beego/v2/client/orm"
+	"yanglao/gonet/orm"
 
 	"github.com/cihub/seelog"
 )

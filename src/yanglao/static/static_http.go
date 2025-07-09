@@ -3,19 +3,28 @@ package static
 import (
 	"io/ioutil"
 
-	"utils"
+	"yanglao/utils"
 
-	us "utils/unmarshal"
+	us "yanglao/utils/unmarshal"
 )
 
 // 服务器类表管理类
 var HttpConfig *Static_Http = &Static_Http{}
 
-type Static_Http struct {
-	CookieName  string `json:"cookie_name"`
-	CookieLife  int64  `json:"cookie_life"`
+type static_http_info struct {
 	Domain      string `json:"domain"`
 	AllowOrigin string `json:"allow_origin"`
+}
+
+type Static_Http struct {
+	CookieName string             `json:"cookie_name"`
+	CookieLife int64              `json:"cookie_life"`
+	Info       []static_http_info `json:"info"`
+
+	HCCPort   string `json:"hcc_port"`
+	ESSPort   string `json:"ees_port"`
+	JLYPort   string `json:"jly_port"`
+	StorePort string `json:"store_port"`
 }
 
 func (p *Static_Http) Init(path string, output bool) {

@@ -50,6 +50,7 @@ func (p *EesMysqlSvr) GetRecords(page int, limit int, condition map[string]strin
 func (p *EesMysqlSvr) AddRecord(Record *structure.Record, workers []structure.RecordWorker) bool {
 	err := p.o.Begin()
 	if err != nil {
+		p.o.Rollback()
 		seelog.Error("EesMysqlSvr::AddRecord Begin error: ", err)
 		return false
 	}

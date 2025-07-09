@@ -2,7 +2,7 @@ package controller
 
 import (
 	"net/http"
-	//"utils"
+	//"yanglao/utils"
 
 	"yanglao/constant"
 	"yanglao/gonet"
@@ -31,6 +31,7 @@ func GetRecordWorkersHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ret, err := gonet.CallByName("EesMysqlSvr", "GetRecordWorks", r.FormValue("orderidx"))
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_GetRecordWorks", r.FormValue("orderidx"))
 	if err != nil {
 		seelog.Error("EES GetRecordWorkersHandler call EesMysqlSvr function GetRecordWorks err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

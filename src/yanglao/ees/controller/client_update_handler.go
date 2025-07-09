@@ -3,7 +3,7 @@ package controller
 import (
 	"encoding/json"
 	"net/http"
-	"utils"
+	"yanglao/utils"
 
 	"yanglao/constant"
 	"yanglao/ees/structure"
@@ -46,6 +46,7 @@ func UpdateClientHandler(w http.ResponseWriter, r *http.Request) {
 	client.SlowIll = string(temp)
 
 	ret, err := gonet.CallByName("EesMysqlSvr", "UpdateClient", &client, r.FormValue("changecid") == "true")
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_UpdateClient", &client, r.FormValue("changecid") == "true")
 	if err != nil {
 		seelog.Error("UpdateClientHandler call EesMysqlSvr function UpdateClient err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

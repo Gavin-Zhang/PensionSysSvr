@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"time"
-	"utils"
 	"yanglao/gonet"
+	"yanglao/utils"
 
 	"yanglao/constant"
 	"yanglao/ees/structure"
@@ -44,6 +44,7 @@ func RegisterClientHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ret, err := gonet.CallByName("EesMysqlSvr", "RegisterClient", &client)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_RegisterClient", &client)
 	if err != nil {
 		seelog.Error("EES RegisterClientHandler call EesMysqlSvr function RegisterClinet err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

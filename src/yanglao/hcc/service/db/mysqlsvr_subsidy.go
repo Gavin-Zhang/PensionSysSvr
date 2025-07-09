@@ -1,6 +1,7 @@
 package db
 
 import (
+	//"github.com/beego/beego/v2/client/orm"
 	"yanglao/gonet/orm"
 
 	"github.com/cihub/seelog"

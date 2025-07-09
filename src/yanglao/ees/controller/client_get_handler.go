@@ -34,6 +34,7 @@ func GetClientHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ret, err := gonet.CallByName("EesMysqlSvr", "GetClient", r.FormValue("key"), r.FormValue("value"))
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_GetClient", r.FormValue("key"), r.FormValue("value"))
 	if err != nil {
 		seelog.Error("EES GetClientHandler call EesMysqlSvr function GetClient err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")
@@ -81,6 +82,7 @@ func GetClientsHandler(w http.ResponseWriter, r *http.Request) {
 
 	condition := GetClientConditionMap(r)
 	ret, err := gonet.CallByName("EesMysqlSvr", "GetClients", page, limit, condition)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_GetClients", page, limit, condition)
 	if err != nil {
 		seelog.Error("EES GetClientsHandler call EesMysqlSvr function GetClients err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

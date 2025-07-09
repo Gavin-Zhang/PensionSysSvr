@@ -5,7 +5,12 @@ import (
 	_ "yanglao/ees/service/http"
 	_ "yanglao/hcc/service/db"
 	_ "yanglao/hcc/service/http"
+	_ "yanglao/jly/service/db"
+	_ "yanglao/jly/service/http"
+	_ "yanglao/jly/structure"
 	_ "yanglao/service"
+	_ "yanglao/store/service/db"
+	_ "yanglao/store/service/http"
 
 	"yanglao/gonet"
 	"yanglao/single"

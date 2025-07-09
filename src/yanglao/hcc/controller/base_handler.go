@@ -38,6 +38,11 @@ func cors(w *http.ResponseWriter, r *http.Request) {
 	base.Cors(w, r)
 }
 
+func corsWithoutCredentials(w *http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+	base.CorsWithoutCredentials(w, r)
+}
+
 func filecors(w *http.ResponseWriter, r *http.Request) {
 	r.ParseMultipartForm(128)
 	base.Cors(w, r)

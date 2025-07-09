@@ -2,7 +2,8 @@ package db
 
 import (
 	"sync"
-	"utils"
+
+	"yanglao/utils"
 
 	"yanglao/ees/structure"
 	"yanglao/static"

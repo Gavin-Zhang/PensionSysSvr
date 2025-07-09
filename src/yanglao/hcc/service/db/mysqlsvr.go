@@ -2,7 +2,7 @@ package db
 
 import (
 	"sync"
-	"utils"
+	"yanglao/utils"
 
 	"yanglao/hcc/structure"
 	"yanglao/static"
@@ -11,6 +11,7 @@ import (
 
 	"yanglao/gonet"
 	"yanglao/gonet/orm"
+	//"github.com/beego/beego/v2/client/orm"
 )
 
 type HccMysqlSvr struct {
@@ -27,7 +28,7 @@ func (p *HccMysqlSvr) Init(wg *sync.WaitGroup) {
 
 func (p *HccMysqlSvr) connect() error {
 	orm.Debug = true
-	orm.RegisterDriver("mysql", orm.DR_MySQL)
+	//orm.RegisterDriver("mysql", orm.DR_MySQL)
 
 	orm.RegisterModel(new(structure.Indexs),
 		new(structure.User),

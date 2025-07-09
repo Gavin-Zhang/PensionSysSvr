@@ -4,6 +4,7 @@ import (
 	"net/http"
 	. "yanglao/ees/controller"
 	"yanglao/gonet"
+	"yanglao/static"
 )
 
 type EesHttpSvr struct {
@@ -41,7 +42,7 @@ func (p *EesHttpSvr) Init(args string) {
 	mux.Handle("/avatarphoto/", http.StripPrefix("/avatarphoto/", http.FileServer(http.Dir("image/ees/avatar"))))
 	mux.Handle("/imagephoto/", http.StripPrefix("/imagephoto/", http.FileServer(http.Dir("image/ees/photo"))))
 
-	http.ListenAndServe("0.0.0.0:8002", mux)
+	http.ListenAndServe(static.HttpConfig.ESSPort, mux)
 }
 
 func init() {

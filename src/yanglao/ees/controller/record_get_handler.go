@@ -44,6 +44,7 @@ func GetRecordsHandler(w http.ResponseWriter, r *http.Request) {
 
 	condition := GetOrderConditionMap(r)
 	ret, err := gonet.CallByName("EesMysqlSvr", "GetRecords", page, limit, condition)
+	//ret, err := gonet.CallByName("MysqlSvr", "EES_GetRecords", page, limit, condition)
 	if err != nil {
 		seelog.Error("EES GetRecordsHandler call EesMysqlSvr function GetRecords err:", err)
 		sendErr(w, constant.ResponseCode_ProgramErr, "内部程序错误")

@@ -210,17 +210,18 @@ func (m *SessionManager) BeginSession(w http.ResponseWriter, r *http.Request) Se
 
 		//用session的ID于cookie关联
 		//cookie名字和失效时间由session管理器维护
-		cookie := http.Cookie{
-			Name: m.cookieName,
-			//这里是并发不安全的，但是这个方法已上锁
-			Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
-			Path:     "/",
-			Domain:   static.HttpConfig.Domain, //"localhost",
-			HttpOnly: false,
-			MaxAge:   int(m.storage.GetMaxLife() / 1000),
-			Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
-		}
-		http.SetCookie(w, &cookie) //设置到响应中
+		// cookie := http.Cookie{
+		// 	Name: m.cookieName,
+		// 	//这里是并发不安全的，但是这个方法已上锁
+		// 	Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
+		// 	Path:     "/",
+		// 	Domain:   static.HttpConfig.Domain, //"localhost",
+		// 	HttpOnly: false,
+		// 	MaxAge:   int(m.storage.GetMaxLife() / 1000),
+		// 	Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
+		// }
+		// http.SetCookie(w, &cookie) //设置到响应中
+		m.set_cookie(w, r, session)
 		return session
 	} else { //如果存在
 		sid, _ := url.QueryUnescape(cookie.Value)              //反转义特殊符号
@@ -233,17 +234,18 @@ func (m *SessionManager) BeginSession(w http.ResponseWriter, r *http.Request) Se
 
 			//用session的ID于cookie关联
 			//cookie名字和失效时间由session管理器维护
-			newCookie := http.Cookie{
-				Name: m.cookieName,
-				//这里是并发不安全的，但是这个方法已上锁
-				Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
-				Path:     "/",
-				Domain:   static.HttpConfig.Domain, //"localhost",
-				HttpOnly: false,
-				MaxAge:   int(m.storage.GetMaxLife() / 1000),
-				Expires:  newSession.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
-			}
-			http.SetCookie(w, &newCookie) //设置到响应中
+			// newCookie := http.Cookie{
+			// 	Name: m.cookieName,
+			// 	//这里是并发不安全的，但是这个方法已上锁
+			// 	Value:    url.QueryEscape(sid), //转义特殊符号@#￥%+*-等
+			// 	Path:     "/",
+			// 	Domain:   static.HttpConfig.Domain, //"localhost",
+			// 	HttpOnly: false,
+			// 	MaxAge:   int(m.storage.GetMaxLife() / 1000),
+			// 	Expires:  newSession.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
+			// }
+			// http.SetCookie(w, &newCookie) //设置到响应中
+			m.set_cookie(w, r, newSession)
 			return newSession
 		}
 		return session
@@ -307,16 +309,50 @@ func (m *SessionManager) SetCookie(w http.ResponseWriter, sessionid string) {
 		seelog.Error("SessionManager::SetCookie not found session by id", sessionid)
 		return
 	}
-	cookie := http.Cookie{
-		Name:     m.cookieName,
-		Value:    url.QueryEscape(session.SessionID()), //转义特殊符号@#￥%+*-等
-		Path:     "/",
-		Domain:   static.HttpConfig.Domain, //"localhost",
-		HttpOnly: false,
-		MaxAge:   int(m.storage.GetMaxLife() / 1000),
-		Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
+	// cookie := http.Cookie{
+	// 	Name:     m.cookieName,
+	// 	Value:    url.QueryEscape(session.SessionID()), //转义特殊符号@#￥%+*-等
+	// 	Path:     "/",
+	// 	Domain:   static.HttpConfig.Domain, //"localhost",
+	// 	HttpOnly: false,
+	// 	MaxAge:   int(m.storage.GetMaxLife() / 1000),
+	// 	Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife())),
+	// }
+	// http.SetCookie(w, &cookie) //设置到响应中
+
+	// 记得打开
+	//m.set_cookie(w, session)
+}
+
+func (m *SessionManager) set_cookie(w http.ResponseWriter, r *http.Request, session Session) {
+	//	for i := 0; i < len(static.HttpConfig.Info); i++ {
+	//		cookie := http.Cookie{
+	//			Name:     m.cookieName,
+	//			Value:    url.QueryEscape(session.SessionID()), //转义特殊符号@#￥%+*-等
+	//			Path:     "/",
+	//			Domain:   static.HttpConfig.Info[i].Domain, //"localhost",
+	//			HttpOnly: false,
+	//			MaxAge:   int(m.storage.GetMaxLife() / 1000),
+	//			Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife()))}
+	//		http.SetCookie(w, &cookie) //设置到响应中
+	//	}
+
+	for _, v := range static.HttpConfig.Info {
+		if v.AllowOrigin == r.Header.Get("Origin") {
+			seelog.Info("set cookie: r[origin]:", r.Header.Get("Origin"), " set domain:", v.Domain)
+			cookie := http.Cookie{
+				Name:  m.cookieName,
+				Value: url.QueryEscape(session.SessionID()), //转义特殊符号@#￥%+*-等
+				Path:  "/",
+				//Domain:   v.Domain,
+				HttpOnly: false,
+				MaxAge:   int(m.storage.GetMaxLife() / 1000),
+				Expires:  session.Last().Add(time.Millisecond * time.Duration(m.storage.GetMaxLife()))}
+			http.SetCookie(w, &cookie) //设置到响应中
+			seelog.Info("set cookie:", cookie)
+			return
+		}
 	}
-	http.SetCookie(w, &cookie) //设置到响应中
 }
 
 var SessionMgr *SessionManager

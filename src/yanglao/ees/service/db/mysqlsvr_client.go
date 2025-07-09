@@ -10,6 +10,7 @@ import (
 	"yanglao/static"
 
 	"github.com/orm"
+	//"github.com/beego/beego/v2/client/orm"
 
 	"github.com/cihub/seelog"
 )
@@ -40,6 +41,7 @@ func (p *EesMysqlSvr) RegisterClient(client *structure.Client) string {
 	err = p.o.Read(role_index)
 	if err != nil {
 		seelog.Error("EesMysqlSvr::RegisterClient get role index err: ", err)
+		p.o.Rollback()
 		return constant.Error_Program.Error()
 	}
 

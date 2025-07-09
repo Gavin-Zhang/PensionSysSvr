@@ -16,10 +16,18 @@ func (p *Mainsvr) Init(args string) {
 	p.NewService("HccMysqlSvr", &wg)
 	wg.Add(1)
 	p.NewService("EesMysqlSvr", &wg)
+	wg.Add(1)
+	p.NewService("JlyMysqlSvr", &wg)
+	//	wg.Add(1)
+	//	p.NewService("StoreMysqlSvr", &wg)
+
+	//wg.Add(1)
+	//p.NewService("MysqlSvr", &wg)
 
 	p.NewService("HccHttpSvr", "")
 	p.NewService("EesHttpSvr", "")
-	//p.NewService("Httpsvr_svr", "")
+	p.NewService("JlyHttpSvr", "")
+	//p.NewService("StoreHttpSvr", "")
 
 }
 
